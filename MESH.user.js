@@ -2,7 +2,7 @@
 // @name	Mesh
 // @namespace	Mush Expedition System Help
 // @description	Script Mush para asistir en las exploraciones
-// @downloadURL	https://github.com/Javiernh/MESH/raw/master/MESH.user.js
+// @downloadURL	https://github.com/Javiernh/MESH/raw/release/MESH.user.js
 // @include	http://mush.twinoid.*/
 // @include	http://mush.vg/
 // @require	http://code.jquery.com/jquery-latest.js

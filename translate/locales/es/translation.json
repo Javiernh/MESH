@@ -1,523 +1,523 @@
-{lng: "es", resources: { "es": { "translation": {
+{"lng": "es", "resources": { "es": { "translation": {
 
-button: {
-	title
+"button": {
+	"title"
 	: "Asistente de exploración"
 	,
-	desc
+	"desc"
 	: "Genial para organizar una exploración exitosa. El equipo de desarrollo no garantiza el éxito de la exploración"
 }
 ,
-planet: {
-	title
+"planet": {
+	"title"
 	: "Planeta"
 	,
-	default
+	"default"
 	: "Nombre del Planeta"
 }
 ,
-direction: {
-	title
+"direction": {
+	"title"
 	: "Dirección"
 	,
-	north
+	"north"
 	: "Norte"
 	,
-	south
+	"south"
 	: "Sur"
 	,
-	east
+	"east"
 	: "Este"
 	,
-	west
+	"west"
 	: "Oeste"
 }
 ,
-fuel
+"fuel"
 : "Combustible"
 ,
-oxygen: {
-	title
+"oxygen": {
+	"title"
 	: "Oxígeno"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-hydrocarbon: {
-	title
+"hydrocarbon": {
+	"title"
 	: "Hidrocarburos"
 	,
-	desc
+	"desc"
 	: "Presencia de hidrocarburo en el subsuelo."
 }
 ,
-insect: {
-	title
+"insect": {
+	"title"
 	: "Insectos"
 	,
-	desc
+	"desc"
 	: "Presencia de insectos diversos."
 }
 ,
-intelligent: {
-	title
+"intelligent": {
+	"title"
 	: "Vida inteligente"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-mankarog: {
-	title
+"mankarog": {
+	"title"
 	: "Mankarog"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,	
-predator: {
-	title
+"predator": {
+	"title"
 	: "Predador"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-ruminant: {
-	title
+"ruminant": {
+	"title"
 	: "Rumiantes"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-hot: {
-	title
+"hot": {
+	"title"
 	: "Altas temperaturas"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-cold: {
-	title
+"cold": {
+	"title"
 	: "Bajas temperaturas"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-sismic_activity: {
-	title
+"sismic_activity": {
+	"title"
 	: "Actividad sísmica"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-strong_wind: {
-	title
+"strong_wind": {
+	"title"
 	: "Viento fuerte"
 	,
-	desc
+	"desc"
 	: "Poderosos vientos azotan el planeta."
 }
 ,
-volcanic_activity: {
-	title
+"volcanic_activity": {
+	"title"
 	: "Actividad volcánica"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-cave: {
-	title
+"cave": {
+	"title"
 	: "Gruta"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-cristal_field: {
-	title
+"cristal_field": {
+	"title"
 	: "Cristalitas"
 	,
-	desc
+	"desc"
 	: "Zona de alta concentración de cristalitas."
 }
 ,
-desert: {
-	title
+"desert": {
+	"title"
 	: "Desierto"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-forest: {
-	title
+"forest": {
+	"title"
 	: "Jungla"
 	,
-	desc
+	"desc"
 	: "Este planeta está en parte cubierto de jungla."
 }
 ,
-mountain: {
-	title
+"mountain": {
+	"title"
 	: "Montaña"
 	,
-	desc
+	"desc"
 	: "Este planeta presenta extensas elevaciones rocosas."
 }
 ,
-ocean: {
-	title
+"ocean": {
+	"title"
 	: "Oceano"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-fruit_trees: {
-	title
+"fruit_trees": {
+	"title"
 	: "Huerta"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-ruins: {
-	title
+"ruins": {
+	"title"
 	: "Ruina"
 	,
-	desc
+	"desc"
 	: "Presencia de ruinas de una antigua civilización."
 }
 ,
-wreck: {
-	title
+"wreck": {
+	"title"
 	: "Restos de nave"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-swamp: {
-	title
+"swamp": {
+	"title"
 	: "Pantano"
 	,
-	desc
+	"desc"
 	: "Este planeta tiene terrenos pantanosos y malolientes."
 }
 ,
-heroe
+"heroe"
 : "Héroe {{num}}:"
 ,
-botanic: {
-	title
+"botanic": {
+	"title"
 	: "Botánico"
 	,
-	desc
+	"desc"
 	: "El botánico sabe distinguir las propiedades de los vegetales. Es el más eficiente en el mantenimiento del jardín.<ul><li>Puede leer las <strong>propiedades de los frutos</strong>.</li><li>Puede leer las <strong>propiedades de las plantas</strong>.</li><li>Puede realizar <strong>injertos</strong>.</li><li>+2 <img src=\'/img/icons/ui/pa_garden.png\' alt=\'gard\'/> por día (puntos de acción <strong>Jardinería</strong>).</li><li>En expedición: La <strong>Cosecha</strong> da un fruto o más.</li><li>Bonus para desarrollar ciertos <strong>Proyectos NERON</strong>.</li></ul>"
 }
 ,
-diplomacy: {
-	title
+"diplomacy": {
+	"title"
 	: "Diplomático"
 	,
-	desc
+	"desc"
 	: "Un buen diplomático sabe como establecer buenas relaciones con los extraterrestres.<ul><li>Elimina las probabilidades de efectos negativos en los encuentros extraterrestres.</li><li>Puede declarar un cese al fuego en una partida.</li></ul>"
 }
 ,
-gunman: {
-	title
+"gunman": {
+	"title"
 	: "Artillero"
 	,
-	desc
+	"desc"
 	: "El artillero domina el uso de armas.<ul><li>+2 <img src=\'/img/icons/ui/pa_shoot.png\' alt=\'shoot\'/> <strong>Tiros gratis</strong> al día.</li><li>Tus tiros fallidos provocan 2 veces menos efectos calamitosos.</li><li>Tus tiros exitosos duplican sus impactos críticos.</li><li>Bonus para desarrollar ciertos <strong>Proyectos NERON</strong>.</li></ul>"
 }
 ,
-sprint: {
-	title
+"sprint": {
+	"title"
 	: "Velocista"
 	,
-	desc
+	"desc"
 	: "¡El velocista inicia siempre con el pie derecho! Goza de Puntos de Movimiento adicionales.<ul><li>Ganas 2 <img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> adicionales en cada conversión <img class=\'paslot\' src=\'/img/icons/ui/pa_slot1.png\' alt=\'pa\' />-<img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> (No acumulable con el <strong>Patinete</strong>).</li></ul>"
 }
 ,
-survival: {
-	title
+"survival": {
+	"title"
 	: "Superviviente"
 	,
-	desc
+	"desc"
 	: "El experto en sobrevivencia es perfecto para las misiones de exploración. Se defiende bien ante los ataques extraterrestres y tendrá más probabilidades de éxito.<ul><li>Expedición: Cada daño se <strong>reduce en un punto</strong>. </li><li>Expedición: El evento <strong>Provisión</strong> da un bistec adicional.</li><li>Expedición: Es el último en morir en caso de evento fatal.</li></ul>"
 }
 ,
-skilful: {
-	title
+"skilful": {
+	"title"
 	: "Polivalente"
 	,
-	desc
+	"desc"
 	: "Así que eres multioficios, bien, ¡adelante!<ul><li>Te consideras <strong>Botánico</strong>, <strong>Diplomático</strong> y <strong>Biólogo</strong> pero no tienes ninguna de sus acciones o recursos.</li></ul>"
 }
 ,
-pilot: {
-	title
+"pilot": {
+	"title"
 	: "Piloto"
 	,
-	desc
+	"desc"
 	: "El piloto es un experto en maniobrar las naves Icarus, Pasiphae y Patrullero. Su dominio del espacio es impresionante.<ul><li>Usa <strong>Tácticas de pilotaje</strong>.</li><li><strong>No falla nunca</strong> los aterrizajes ni los despegues.</li><li>Bonus para desarrollar ciertos <strong>Proyectos NERON</strong>.</li></ul>"
 }
 ,
-bag
+"bag"
 : "Mochila:"
 ,
-equipment
+"equipment"
 : "Equipamiento"
 ,
-postit: {
-	title
+"postit": {
+	"title"
 	: "Post-it"
 	,
-	desc
+	"desc"
 	: "Papelitos adhesivos que pegan a medias..."
 }
 ,
-space_suit: {
-	title
+"space_suit": {
+	"title"
 	: "Traje espacial"
 	,
-	desc
+	"desc"
 	: "Sirve para explorar planetas sin oxígeno.<ul><li>Te hará sobrevivir al ser eyectado de una nave y respirar en atmósferas no respirables.</li></ul>"
 }
 ,
-trad_module: {
-	title
+"trad_module": {
+	"title"
 	: "Módulo Babel"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-driller: {
-	title
+"driller": {
+	"title"
 	: "Taladro"
 	,
-	desc
+	"desc"
 	: "Permite extraer minerales en una expedición.<ul><li>Expedición: Duplica las ganancias de 'Hidrocarburo'</li></ul>"
 }
 ,
-echo_sounder: {
-	title
+"echo_sounder": {
+	"title"
 	: "Eco-localizador"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-quad_compass: {
-	title
+"quad_compass": {
+	"title"
 	: "Brújula cuadrimétrica"
 	,
-	desc
+	"desc"
 	: "Sirve mucho en las misiones.<ul><li>Expedición: Protege al grupo de quedar 'Errático'.</li><li>Expedición: Te protege de quedar 'Perdido'</li></ul>"
 }
 ,
-rope: {
-	title
+"rope": {
+	"title"
 	: "Cuerda"
 	,
-	desc
+	"desc"
 	: "Permite salir de aprietos en una expedición.<ul><li>Expedición: Anula los daños personales que puedas sufrir en zonas \'Sísmicas\', \'Gruta\' y \'Montaña\'. No protege de las muertes súbitas.</li></ul>"
 }
 ,
-heat_seeker: {
-	title
+"heat_seeker": {
+	"title"
 	: "Termosensor"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-white_flag: {
-	title
+"white_flag": {
+	"title"
 	: "Bandera blanca"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-weaponry
+"weaponry"
 : "Armamento"
 ,
-blaster: {
-	title
+"blaster": {
+	"title"
 	: "Blaster"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-knife: {
-	title
+"knife": {
+	"title"
 	: "Cuchillo"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-natamy_riffle: {
-	title
+"natamy_riffle": {
+	"title"
 	: "Fusil Natamy"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-items_decoup_05: {
-	title
+"items_decoup_05": {
+	"title"
 	: "Lizaro Jungle"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-machine_gun: {
-	title
+"machine_gun": {
+	"title"
 	: "Sulfatosa"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-missile_launcher: {
-	title
+"missile_launcher": {
+	"title"
 	: "Lanza cohetes"
 	,
-	desc
+	"desc"
 	: ""
 }
 ,
-grenade: {
-	title
+"grenade": {
+	"title"
 	: "Granada"
 	,
-	desc
+	"desc"
 	: "Es un poderoso explosivo que te sacará de situaciones peligrosas durante una expedición.<ul><li>Expedición: +3 a la fuerza de tu equipo en caso de combate.</li></ul>"
 }
 ,
-txt: {
-	title
+"txt": {
+	"title"
 	: "**Información de Exploración a {{p_name}}.**"
 	,
-	info
+	"info"
 	: "\n//Está localizado a {{p_fuel}} sectores al {{p_dir}} y tiene {{zones}} zonas.//"
 	,
-	group
+	"group"
 	: "\n \n**Grupo propuesto y equipamiento: **"
 	,
-	gains
+	"gains"
 	: "\n \nPosibles ganancias: **"
 	,
-	o2
+	"o2
 	: "\nHasta {{maxoxygen}} unidades de :o2:."
 	,
-	fuel
+	"fuel"
 	: "\nHasta {{maxfuel}} unidades de :fuel:."
 	,
-	artefact
+	"artefact"
 	: "\nHasta un artefacto alien."
 	,
-	artefact_plural
+	"artefact_plural"
 	: "\nHasta {{count}} artefactos alien."
 	,
-	map
+	"map"
 	: "\nHasta un fragmento de mapa."
 	,
-	map_plural
+	"map_plural"
 	: "\nHasta {{count}} fragmentos de mapa."
 	,
-	steak
+	"steak"
 	: "\nHasta un bistec alien."
 	,
-	steak_plural
+	"steak_plural"
 	: "\nHasta {{count}} bistecs alien."
 	,
-	fruit
+	"fruit"
 	: "\nHasta un fruto alien."
 	,
-	fruit_plural
+	"fruit_plural"
 	: "\nHasta {{count}} frutos alien."
 	,
-	team
+	"team"
 	: "\n \nEl equipo cuenta con {{strength}} puntos de fuerza."
 	,
-	risks
+	"risks"
 	: "\n \n**Posibles riesgos: **"
 	,
-	groupdeath
+	"groupdeath"
 	: "\nEl grupo muere hasta en una zona."
 	,
-	groupdeath_plural
+	"groupdeath_plural"
 	: "\nEl grupo muere hasta en {{count}} zonas."
 	,
-	death
+	"death"
 	: "\nUn miembro muere hasta en una zona."
 	,
-	death_plural
+	"death_plural"
 	: "\nUn miembro muere hasta en {{count}} zonas."
 	,
-	health
+	"health"
 	: "\nUn miembro pierde hasta {{health}} puntos de vida."
 	,
-	accident
+	"accident"
 	: "\nHasta {{accident1}} - {{accident2}} :pv: de daño por accidente."
 	,
-	fatigue
+	"fatigue"
 	: "\nHasta {{fatigue}} :pv: de daño por fatiga."
 	,
-	fight
+	"fight"
 	: "\nHasta un combate con hasta {{damage}} de fuerza."
 	,
-	fight_plural
+	"fight_plural"
 	: "\nHasta {{count}} combates con hasta {{damage}} de fuerza."
 	,
-	mushtrap
+	"mushtrap"
 	: "\nInfectado con hasta una espora."
 	,
-	mushtrap_plural
+	"mushtrap_plural"
 	: "\nInfectado con hasta {{count}} esporas."
 	,
-	lost
+	"lost"
 	: "\nUn miembro se pierde hasta en una zona."
 	,
-	lost_plural
+	"lost_plural"
 	: "\nUn miembro se pierde hasta en {{count}} zonas."
 	,
-	illness
+	"illness"
 	: "\nUn miembro enferma hasta en una zona."
 	,
-	illness_plural
+	"illness_plural"
 	: "\nUn miembro enferma hasta en {{count}} zonas."
 	,
-	objlost
+	"objlost"
 	: "\nHasta un objeto perdido."
 	,
-	objlost_plural
+	"objlost_plural"
 	: "\nHasta {{count}} objetos perdidos."
 	,
-	finnish
+	"finnish"
 	: "\nHasta una zona de regreso a nave."
 	,
-	finnish_plural
+	"finnish_plural"
 	: "\nHasta {{count}} zonas de regreso a nave."
 	,
-	wander
+	"wander"
 	: "\nEl grupo queda errante hasta en una zona."
 	,
-	wander_plural
+	"wander_plural"
 	: "\nEl grupo queda errante hasta en {{count}} zonas."
 }
 }}}}

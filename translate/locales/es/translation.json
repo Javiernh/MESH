@@ -1,5 +1,4 @@
 {"lng": "es", "resources": { "es": { "translation": {
-
 "button": {
 	"title"
 	: "Asistente de exploración"
@@ -220,7 +219,7 @@
 	: "Botánico"
 	,
 	"desc"
-	: "El botánico sabe distinguir las propiedades de los vegetales. Es el más eficiente en el mantenimiento del jardín.<ul><li>Puede leer las <strong>propiedades de los frutos</strong>.</li><li>Puede leer las <strong>propiedades de las plantas</strong>.</li><li>Puede realizar <strong>injertos</strong>.</li><li>+2 <img src=\'/img/icons/ui/pa_garden.png\' alt=\'gard\'/> por día (puntos de acción <strong>Jardinería</strong>).</li><li>En expedición: La <strong>Cosecha</strong> da un fruto o más.</li><li>Bonus para desarrollar ciertos <strong>Proyectos NERON</strong>.</li></ul>"
+	: "El botánico sabe distinguir las propiedades de los vegetales. Es el más eficiente en el mantenimiento del jardín.<ul><li>Puede leer las <strong>propiedades de los frutos</strong>.</li><li>Puede leer las <strong>propiedades de las plantas</strong>.</li><li>Puede realizar <strong>injertos</strong>.</li><li>+2 <img src='/img/icons/ui/pa_garden.png' alt='gard'/> por día (puntos de acción <strong>Jardinería</strong>).</li><li>En expedición: La <strong>Cosecha</strong> da un fruto o más.</li><li>Bonus para desarrollar ciertos <strong>Proyectos NERON</strong>.</li></ul>"
 }
 ,
 "diplomacy": {
@@ -236,7 +235,7 @@
 	: "Artillero"
 	,
 	"desc"
-	: "El artillero domina el uso de armas.<ul><li>+2 <img src=\'/img/icons/ui/pa_shoot.png\' alt=\'shoot\'/> <strong>Tiros gratis</strong> al día.</li><li>Tus tiros fallidos provocan 2 veces menos efectos calamitosos.</li><li>Tus tiros exitosos duplican sus impactos críticos.</li><li>Bonus para desarrollar ciertos <strong>Proyectos NERON</strong>.</li></ul>"
+	: "El artillero domina el uso de armas.<ul><li>+2 <img src='/img/icons/ui/pa_shoot.png' alt='shoot'/> <strong>Tiros gratis</strong> al día.</li><li>Tus tiros fallidos provocan 2 veces menos efectos calamitosos.</li><li>Tus tiros exitosos duplican sus impactos críticos.</li><li>Bonus para desarrollar ciertos <strong>Proyectos NERON</strong>.</li></ul>"
 }
 ,
 "sprint": {
@@ -244,7 +243,7 @@
 	: "Velocista"
 	,
 	"desc"
-	: "¡El velocista inicia siempre con el pie derecho! Goza de Puntos de Movimiento adicionales.<ul><li>Ganas 2 <img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> adicionales en cada conversión <img class=\'paslot\' src=\'/img/icons/ui/pa_slot1.png\' alt=\'pa\' />-<img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> (No acumulable con el <strong>Patinete</strong>).</li></ul>"
+	: "¡El velocista inicia siempre con el pie derecho! Goza de Puntos de Movimiento adicionales.<ul><li>Ganas 2 <img class='paslot' src='/img/icons/ui/pa_slot2.png' alt='pm'/> adicionales en cada conversión <img class='paslot' src='/img/icons/ui/pa_slot1.png' alt='pa' />-<img class='paslot' src='/img/icons/ui/pa_slot2.png' alt='pm'/> (No acumulable con el <strong>Patinete</strong>).</li></ul>"
 }
 ,
 "survival": {
@@ -330,7 +329,7 @@
 	: "Cuerda"
 	,
 	"desc"
-	: "Permite salir de aprietos en una expedición.<ul><li>Expedición: Anula los daños personales que puedas sufrir en zonas \'Sísmicas\', \'Gruta\' y \'Montaña\'. No protege de las muertes súbitas.</li></ul>"
+	: "Permite salir de aprietos en una expedición.<ul><li>Expedición: Anula los daños personales que puedas sufrir en zonas 'Sísmicas', 'Gruta' y 'Montaña'. No protege de las muertes súbitas.</li></ul>"
 }
 ,
 "heat_seeker": {

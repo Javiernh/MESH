@@ -1,12 +1,10 @@
 {"lng": "es", "resources": { "es": { "translation": {
 "button": {
 	"title"
-	: "Asistente de exploración"
-	,
+	: "Asistente de exploración",
 	"desc"
 	: "Genial para organizar una exploración exitosa. El equipo de desarrollo no garantiza el éxito de la exploración"
-}
-,
+},
 "planet": {
 	"title"
 	: "Planeta"
@@ -420,7 +418,7 @@
 	"gains"
 	: "\n \nPosibles ganancias: **"
 	,
-	"o2
+	"o2"
 	: "\nHasta {{maxoxygen}} unidades de :o2:."
 	,
 	"fuel"

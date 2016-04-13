@@ -1,9 +1,37 @@
 {"lng": "es", "resources": { "es": { "translation": {
 "button": {
 	"title"
-	: "Asistente de exploración",
+	: "Asistente de exploración"
+	,
 	"desc"
 	: "Genial para organizar una exploración exitosa. El equipo de desarrollo no garantiza el éxito de la exploración"
+	,
+	"gen_txt"
+	: "Generar"
+	,
+	"gen_title"
+	: "Generar informe"
+	,
+	"gen_desc"
+	: "Haz click para generar el informe de exploración al planeta. Asegúrate de haber rellenado correctamente los datos del planeta, héroes y mochila."
+	,
+	"cpy_txt"
+	: "Copiar"
+	,
+	"cpy_title"
+	: "Copiar informe"
+	,
+	"cpy_desc"
+	: "Haz click para copiar el informe de exploración en el portapapeles. Si no te funciona, selecciona el texto y presiona Ctrl+C."
+	,
+	"rst_txt"
+	: "Resetear"
+	,
+	"rst_title"
+	: "Resetear entradas"
+	,
+	"rst_desc"
+	: "Haz click para establecer por defecto todos los valores de los campos de entrada."
 },
 "planet": {
 	"title"
@@ -416,7 +444,7 @@
 	: "\n \n**Grupo propuesto y equipamiento: **"
 	,
 	"gains"
-	: "\n \nPosibles ganancias: **"
+	: "\n \n**Posibles ganancias: **"
 	,
 	"o2"
 	: "\nHasta {{maxoxygen}} unidades de :o2:."

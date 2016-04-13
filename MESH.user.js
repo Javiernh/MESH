@@ -7,7 +7,12 @@
 // @include	http://mush.vg/
 // @require	http://code.jquery.com/jquery-latest.js
 // @require	http://data.mush.twinoid.es/js/4/jquery-ui-1.9.1.custom.min.js
-// @version	0.2b
+// @require	https://raw.githubusercontent.com/i18next/i18next/master/i18next.min.js
+// @grant	GM_getResourceText
+// @resource	translation:es https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/es/translation.json
+// @resource	translation:en https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/en/translation.json
+// @resource	translation:fr https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/fr/translation.json
+// @version	0.3b
 // ==/UserScript==
 /* jshint -W043 */
 
@@ -25,401 +30,41 @@ MESH.domain = document.domain;
 MESH.URL = document.URL;
 MESH.MushURL = 'http://' + MESH.domain;
 MESH.Path = location.pathname;
-MESH.image = 'http://i.imgur.com/n42XkjT.gif';
+MESH.icon = 'http://imgup.motion-twin.com/twinoid/2/e/4acc992f_946355.jpg';
 
-MESH.lang = function() {
+MESH.astroTags = ["oxygen", "hydrocarbon", "insect", "intelligent", "mankarog", "predator", "ruminant", "hot", "cold", "sismic_activity", "strong_wind", "volcanic_activity",
+				  "cave", "cristal_field", "desert", "forest", "mountain", "ocean", "fruit_trees", "ruins", "wreck", "swamp"];
+MESH.items = ["postit", "space_suit", "trad_module", "driller", "echo_sounder", "quad_compass", "rope", "heat_seeker", "white_flag",
+			  "blaster", "knife", "natamy_riffle", "items_decoup_05", "machine_gun", "missile_launcher", "grenade"];
+// TODO: Add Polyvalent and maybe Pilot
+MESH.skills = ["botanic", "diplomacy", "gunman", "sprint", "survival"];
+MESH.heroes = ["jin_su", "frieda", "kuan_ti", "janice", "roland", "hua", "paola", "chao", "finola",
+			   "stephen", "ian", "chun", "raluca", "gioele", "eleesha", "terrence", "andie", "derek"];
+
+MESH.initLang = function() {
 	switch (MESH.domain) {
 		case 'mush.twinoid.es':	// SPANISH
-			MESH.astroTags = {
-			// TODO: These titles must be copied from the game
-				oxygen: "Oxígeno",
-				hydrocarbon: "Hidrocarburos",
-				insect: "Insectos",
-				intelligent: "Vida inteligente",
-				mankarog: "Mankarog",
-				predator: "Predador",
-				ruminant: "Ruminantes",
-				hot: "Altas temperaturas",
-				cold: "Bajas temperaturas",
-				sismic_activity: "Actividad sísmica",
-				strong_wind: "Viento fuerte",
-				volcanic_activity: "Actividad volcánica",
-				cave: "Gruta",
-				cristal_field: "Cristalitas",
-				desert: "Desierto",
-				forest: "Bosque",
-				mountain: "Montañas",
-				ocean: "Oceano",
-				fruit_trees: "Huerta",
-				ruins: "Ruinas",
-				wreck: "Restos de nave",
-				swamp: "Pantano"
-			};
-			MESH.astroTagsdesc = {
-			// TODO: These descriptions must be copied from the game
-				oxygen: "",
-				hydrocarbon: "",
-				insect: "",
-				intelligent: "",
-				mankarog: "",
-				predator: "",
-				ruminant: "",
-				hot: "",
-				cold: "",
-				sismic_activity: "",
-				strong_wind: "",
-				volcanic_activity: "",
-				cave: "",
-				cristal_field: "",
-				desert: "",
-				forest: "",
-				mountain: "",
-				ocean: "",
-				fruit_trees: "",
-				ruins: "",
-				wreck: "",
-				swamp: ""
-			};
-			MESH.items = {
-			// TODO: These titles must be copied from the game
-				postit: "Post-it",
-				space_suit: "Traje espacial",
-				trad_module: "Módulo Babel",
-				driller: "Taladro",
-				echo_sounder: "Eco-localizador",
-				quad_compass: "Brújula cuadrimétrica",
-				rope: "Cuerda",
-				heat_seeker: "Termosensor",
-				white_flag: "Bandera blanca",
-				blaster: "Blaster",
-				knife: "Cuchillo",
-				natamy_riffle: "Fusil Natamy",
-				items_decoup_05: "Lizaro Jungle",
-				machine_gun: "Sulfatosa",
-				missile_launcher: "Lanza cohetes",
-				grenade: "Granada"
-			};
-			MESH.itemdesc = {
-			// TODO: These descriptions must be copied from the game
-				postit: "",
-				space_suit: "Permite salir de aprietos en una expedición.<ul><li>Expedición: Anula los daños personales que puedas sufrir en zonas \'Sísmicas\', \'Gruta\' y \'Montaña\'. No protege de las muertes súbitas.</li></ul>",
-				trad_module: "",
-				driller: "",
-				echo_sounder: "",
-				quad_compass: "",
-				rope: "Permite salir de aprietos en una expedición.<ul><li>Expedición: Anula los daños personales que puedas sufrir en zonas \'Sísmicas\', \'Gruta\' y \'Montaña\'. No protege de las muertes súbitas.</li></ul>",
-				heat_seeker: "",
-				white_flag: "",
-				blaster: "",
-				knife: "",
-				natamy_riffle: "",
-				items_decoup_05: "",
-				machine_gun: "",
-				missile_launcher: "",
-				grenade: ""
-			};
-			MESH.skills = {
-				botanic: "Botánico",
-				diplomacy: "Diplomático",
-				gunman: "Artillero",
-				sprint: "Velocista",
-				survival: "Superviviente"
-			};
-			MESH.skillsdesc = {
-				botanic: "El botánico sabe distinguir las propiedades de los vegetales. Es el más eficiente en el mantenimiento del jardín.<ul><li>Puede leer las <strong>propiedades de los frutos</strong>.</li><li>Puede leer las <strong>propiedades de las plantas</strong>.</li><li>Puede realizar <strong>injertos</strong>.</li><li>+2 <img src=\'/img/icons/ui/pa_garden.png\' alt=\'gard\'/> por día (puntos de acción <strong>Jardinería</strong>).</li><li>En expedición: La <strong>Cosecha</strong> da un fruto o más.</li><li>Bonus para desarrollar ciertos <strong>Proyectos NERON</strong>.</li></ul>",
-				diplomacy: "Un buen diplomático sabe como establecer buenas relaciones con los extraterrestres.<ul><li>Elimina las probabilidades de efectos negativos en los encuentros extraterrestres.</li><li>Puede declarar un cese al fuego en una partida.</li></ul>",
-				gunman: "El artillero domina el uso de armas.<ul><li>+2 <img src=\'/img/icons/ui/pa_shoot.png\' alt=\'shoot\'/> <strong>Tiros gratis</strong> al día.</li><li>Tus tiros fallidos provocan 2 veces menos efectos calamitosos.</li><li>Tus tiros exitosos duplican sus impactos críticos.</li><li>Bonus para desarrollar ciertos <strong>Proyectos NERON</strong>.</li></ul>",
-				sprint: "¡El velocista inicia siempre con el pie derecho! Goza de Puntos de Movimiento adicionales.<ul><li>Ganas 2 <img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> adicionales en cada conversión <img class=\'paslot\' src=\'/img/icons/ui/pa_slot1.png\' alt=\'pa\' />-<img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> (No acumulable con el <strong>Patinete</strong>).</li></ul>",
-				survival: "El experto en sobrevivencia es perfecto para las misiones de exploración. Se defiende bien ante los ataques extraterrestres y tendrá más probabilidades de éxito.<ul><li>Expedición: Cada daño se <strong>reduce en un punto</strong>. </li><li>Expedición: El evento <strong>Provisión</strong> da un bistec adicional.</li><li>Expedición: Es el último en morir en caso de evento fatal.</li></ul>"
-			};
-			MESH.msglang = {
-				msgtitle: "Información de Expedición a " + MESH.pname + ".**",
-				msginfo: "\n//Está localizado a " + MESH.pfuel + " sectores al " + MESH.pdirection + " y tiene " + MESH.Totzones + " zonas.//",
-				group: "\n \n**Grupo propuesto y equipo: **",
-				gains: "\n \n**Posibles ganancias: **",
-				o2: "\nHasta " + MESH.maxoxygen + " unidades de :o2:.",
-				fuel: "\nHasta " + MESH.maxfuel + " unidades de :fuel:.",
-				artefact: "\nHasta " + MESH.artefact + " artefacto(s) alien.",
-				map: "\nHasta " + MESH.mapfragment + " fragmento(s) de mapa.",
-				steak: "\nHasta " + MESH.maxsteaks + " bistec(s) alien.",
-				fruit: "\nHasta " + MESH.maxfruits + " fruto(s) alien.",
-				risks: "\n \n**Posibles riesgos: **",
-				groupdeath: "\nHasta " + MESH.groupdeath + " zona(s) de muerte del grupo.",
-				death: "\nHasta " + MESH.death + " tripulante(s) muerto(s) en el acto.",
-				accident: "\nHasta " + MESH.accident[0] + " - " + MESH.accident[1] + " :pv: de daño por accidente.",
-				fight: "\nHasta " + MESH.fightzones + " combate(s) con hasta " + MESH.fight[0] + " de fuerza. ",
-				fatigue: "\nHasta " + MESH.fatigue + " :pv: de daño por fatiga.",
-				mushtrap: "\nHasta " + MESH.mushtrap + " trampa(s) mush.",
-				lost: "\nHasta " + MESH.mia + " tripulante(s) perdido(s)",
-				illness: "\nHasta " + MESH.illness + " enfermedad(es) contraída(s).",
-				objlost: "\nHasta " + MESH.itemlost + " objeto(s) perdido(s).",
-				finnish: "\nHasta " + MESH.return + " zona(s) de regreso a nave.",
-				wander: "\nHasta " + MESH.wander + " zona(s) errante(s)",
-			};
+			MESH.lang = 'es';
 			break;
 		case 'mush.twinoid.com':	// ENGLISH
-			MESH.astroTags = {
-			// TODO: These titles must be copied from the game
-				oxygen: "Oxygen",
-				hydrocarbon: "Hydrocarbon",
-				insect: "Insect",
-				intelligent: "Intelligent",
-				mankarog: "Mankarog",
-				predator: "Predator",
-				ruminant: "Ruminant",
-				hot: "Hot",
-				cold: "Cold",
-				sismic_activity: "Sismic activity",
-				strong_wind: "Strong wind",
-				volcanic_activity: "Volcanic activity",
-				cave: "Cave",
-				cristal_field: "Cristal field",
-				desert: "Desert",
-				forest: "Forest",
-				mountain: "Mountain",
-				ocean: "Ocean",
-				fruit_trees: "Fruit trees",
-				ruins: "Ruins",
-				wreck: "Wreck",
-				swamp: "Swamp"
-			};
-			MESH.astroTagsdesc = {
-			// TODO: These descriptions must be copied from the game
-				oxygen: "",
-				hydrocarbon: "",
-				insect: "",
-				intelligent: "",
-				mankarog: "",
-				predator: "",
-				ruminant: "",
-				hot: "",
-				cold: "",
-				sismic_activity: "",
-				strong_wind: "",
-				volcanic_activity: "",
-				cave: "",
-				cristal_field: "",
-				desert: "",
-				forest: "",
-				mountain: "",
-				ocean: "",
-				fruit_trees: "",
-				ruins: "",
-				wreck: "",
-				swamp: ""
-			};
-			MESH.items = {
-			// TODO: These titles must be copied from the game
-				postit: "Postit",
-				space_suit: "Space suit",
-				trad_module: "Trad module",
-				driller: "Driller",
-				echo_sounder: "Echo sounder",
-				quad_compass: "Quad compass",
-				rope: "Rope",
-				heat_seeker: "Heat seeker",
-				white_flag: "White flag",
-				blaster: "Blaster",
-				knife: "Knife",
-				natamy_riffle: "Natamy riffle",
-				items_decoup_05: "Lizaro Jungle",
-				machine_gun: "Machine gun",
-				missile_launcher: "Missile launcher",
-				grenade: "Grenade"
-			};
-			MESH.itemdesc = {
-			// TODO: These descriptions must be copied from the game
-				postit: "",
-				space_suit: "",
-				trad_module: "",
-				driller: "",
-				echo_sounder: "",
-				quad_compass: "",
-				rope: "",
-				heat_seeker: "",
-				white_flag: "",
-				blaster: "",
-				knife: "",
-				natamy_riffle: "",
-				items_decoup_05: "",
-				machine_gun: "",
-				missile_launcher: "",
-				grenade: ""
-			};
-			MESH.skills = {
-				botanic: "Botanist",
-				diplomacy: "Diplomat",
-				gunman: "Shooter",
-				sprint: "Sprinter",
-				survival: "Survivalist"
-			};
-			MESH.skillsdesc = {
-				botanic: "Capable of distinguishing the characteristics of the various plants and fruits. They are also equally effective when maintaining the garden.<ul><li>Can read the <strong>fruit nutrition information</strong>.</li><li>Can read <strong>plant properties</strong>.</li><li>Can carry out <strong>transplants</strong>.</li><li>+2 <img src=\'/img/icons/ui/pa_garden.png\' alt=\'gard\'/> per day (<strong>Gardening</strong> Action Points).</li><li>Expedition: The <strong>harvest</strong> action gives an additional fruit.</li><li>Bonus for developing certain <strong>NERON projects</strong>.</li></ul>",
-				diplomacy: "A good diplomat knows how to communicate effectively with extra-terrestrials.<ul><li>Eliminates the chance of encountering hostility from extra-terrestrials.</li><li>Can declare a ceasefire once per game.</li></ul>",
-				gunman: "At ease handling all kinds of weapons<ul><li>+2 <strong>Free Shots</strong> <img src=\'/img/icons/ui/pa_shoot.png\' alt=\'shoot\'/> per day.</li><li>Your off-target shots cause 2 times fewer accidents.</li><li>Your successful shots cause 2 times as many critical hits.</li><li>Bonus +1 to expedition combat strangth.</li><li>Bonus for developing certain <strong>NERON projects</strong>.</li></ul>",
-				sprint: "The Sprinter always puts their best foot forward! They get additional Movement Points.<ul><li>You earn an additional 2 <img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> every time you convert <img class=\'paslot\' src=\'/img/icons/ui/pa_slot1.png\' alt=\'pa\' />-<img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> (does not stack with <strong>Scooter</strong>).</li><li>Expeditions involving a Sprinter will allow an additional planetary zone to be explored</li></ul>",
-				survival: "The Survivalist is great to have on exploration missions. They can defend themselves more effectively against extra-terrestrial life forms and generally deal with these encounters better than anyone else.<ul><li>Expedition : All damage is <strong>reduced by one point</strong>. </li><li>Expedition : The action <strong>Provision</strong> gives one additional steak.</li><li>Expedition : Last to die if a team fatality occurs.</li></ul>"
-			};
-			MESH.msglang = {
-			// TODO: Translate to english
-				msgtitle: "Información de Expedición a " + MESH.pname + ".**",
-				msginfo: "\n//Está localizado a " + MESH.pfuel + " sectores al " + MESH.pdirection + " y tiene " + MESH.Totzones + " zonas.//",
-				group: "\n \n**Grupo propuesto y equipo: **",
-				gains: "\n \n**Posibles ganancias: **",
-				o2: "\nHasta " + MESH.maxoxygen + " unidades de :o2:.",
-				fuel: "\nHasta " + MESH.maxfuel + " unidades de :fuel:.",
-				artefact: "\nHasta " + MESH.artefact + " artefacto(s) alien.",
-				map: "\nHasta " + MESH.mapfragment + " fragmento(s) de mapa.",
-				steak: "\nHasta " + MESH.maxsteaks + " bistec(s) alien.",
-				fruit: "\nHasta " + MESH.maxfruits + " fruto(s) alien.",
-				risks: "\n \n**Posibles riesgos: **",
-				groupdeath: "\nHasta " + MESH.groupdeath + " zona(s) de muerte del grupo.",
-				death: "\nHasta " + MESH.death + " tripulante(s) muerto(s) en el acto.",
-				accident: "\nHasta " + MESH.accident[0] + " - " + MESH.accident[1] + " :pv: de daño por accidente.",
-				fight: "\nHasta " + MESH.fightzones + " combate(s) con hasta " + MESH.fight[0] + " de fuerza. ",
-				fatigue: "\nHasta " + MESH.fatigue + " :pv: de daño por fatiga.",
-				mushtrap: "\nHasta " + MESH.mushtrap + " trampa(s) mush.",
-				lost: "\nHasta " + MESH.mia + " tripulante(s) perdido(s)",
-				illness: "\nHasta " + MESH.illness + " enfermedad(es) contraída(s).",
-				objlost: "\nHasta " + MESH.itemlost + " objeto(s) perdido(s).",
-				finnish: "\nHasta " + MESH.return + " zona(s) de regreso a nave.",
-				wander: "\nHasta " + MESH.wander + " zona(s) errante(s)",
-			};
+			MESH.lang = 'en';
 			break;
 		default:	// FRENCH
-			MESH.astroTags = {
-			// TODO: These titles must be copied from the game
-				oxygen: "",
-				hydrocarbon: "",
-				insect: "",
-				intelligent: "",
-				mankarog: "",
-				predator: "",
-				ruminant: "",
-				hot: "",
-				cold: "",
-				sismic_activity: "",
-				strong_wind: "",
-				volcanic_activity: "",
-				cave: "",
-				cristal_field: "",
-				desert: "",
-				forest: "",
-				mountain: "",
-				ocean: "",
-				fruit_trees: "",
-				ruins: "",
-				wreck: "",
-				swamp: ""
-			};
-			MESH.astroTagsdesc = {
-			// TODO: These descriptions must be copied from the game
-				oxygen: "",
-				hydrocarbon: "",
-				insect: "",
-				intelligent: "",
-				mankarog: "",
-				predator: "",
-				ruminant: "",
-				hot: "",
-				cold: "",
-				sismic_activity: "",
-				strong_wind: "",
-				volcanic_activity: "",
-				cave: "",
-				cristal_field: "",
-				desert: "",
-				forest: "",
-				mountain: "",
-				ocean: "",
-				fruit_trees: "",
-				ruins: "",
-				wreck: "",
-				swamp: ""
-			};
-			MESH.items = {
-			// TODO: These titles must be copied from the game
-				postit: "",
-				space_suit: "",
-				trad_module: "",
-				driller: "",
-				echo_sounder: "",
-				quad_compass: "",
-				rope: "",
-				heat_seeker: "",
-				white_flag: "",
-				blaster: "",
-				knife: "",
-				natamy_riffle: "",
-				items_decoup_05: "",
-				machine_gun: "",
-				missile_launcher: "",
-				grenade: ""
-			};
-			MESH.itemdesc = {
-			// TODO: These descriptions must be copied from the game
-				postit: "",
-				space_suit: "",
-				trad_module: "",
-				driller: "",
-				echo_sounder: "",
-				quad_compass: "",
-				rope: "",
-				heat_seeker: "",
-				white_flag: "",
-				blaster: "",
-				knife: "",
-				natamy_riffle: "",
-				items_decoup_05: "",
-				machine_gun: "",
-				missile_launcher: "",
-				grenade: ""
-			};
-			MESH.skills = {
-				botanic: "Botaniste",
-				diplomacy: "Diplomatie",
-				gunman: "Tireur",
-				sprint: "Sprinter",
-				survival: "Survie"
-			};
-			MESH.skillsdesc = {
-				botanic: "Le botaniste peut distinguer les caractéristiques des légumes et des plantes. Il est également redoutablement efficace dans la maintenance du Jardin.<ul><li>Peut lire les <strong>propriétés des fruits</strong>.</li><li>Peut lire les <strong>propriétés des plantes</strong>.</li><li>Peut effectuer des <strong>greffes</strong>.</li><li>+2 <img src=\'/img/icons/ui/pa_garden.png\' alt=\'gard\'/> par jour (points d\'action <strong>Jardinage</strong>).</li><li>Expédition : L\'év&egrave;nement <strong>Récolte</strong> donne un fruit de plus.</li><li>Bonus pour développer certains <strong>Projets NERON</strong>.</li></ul>",
-				diplomacy: "Un bon diplomate sait comment entrer en contact avec les races extra-terrestres.<ul><li>Élimine les chances de résultats négatifs lors des rencontres extra-terrestres.</li><li>Peut déclarer un cesser-le-feu une fois par partie.</li></ul>",
-				gunman: "Le tireur manipule les armes de tout type avec beaucoup d\'aisance.<ul><li>+2 <strong>Tirs gratuits</strong> <img src=\'/img/icons/ui/pa_shoot.png\' alt=\'shoot\'/> par jour.</li><li>Vos tirs ratés provoquent 2 fois moins de maladresses.</li><li>Vos tirs réussis provoquent 2 fois plus de coups critiques.</li><li>Bonus pour développer certains Projets NERON.</li></ul>",
-				sprint: "Le Sprinter débute toujours sa journée du bon pied ! Il profite de Points de Mouvement supplémentaires.<ul><li>Vous gagnez 2 <img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> de plus à chaque conversion <img class=\'paslot\' src=\'/img/icons/ui/pa_slot1.png\' alt=\'pa\' />-<img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> ( non cumulatif avec la <strong>Trottinette</strong>).</li><li>+ 1 étape en exploration.</li></ul>",
-				survival: "L\'expert en survie est un bon atout dans les missions d\'exploration. Il peut se défendre plus efficacement contre les formes de vies extraterrestres et s\'en sortira mieux que les autres.<ul><li>Expédition : Chaque dégât est <strong>réduit de un point</strong>. </li><li>Expédition : L\'év&egrave;nement <strong>Provision</strong> donne un steak de plus.</li><li>Expédition : Dernier à mourir en cas d\'év&egrave;nement fatal.</li></ul>"
-			};
-			MESH.msglang = {
-			// TODO: Translate to french
-				msgtitle: "Información de Expedición a " + MESH.pname + ".**",
-				msginfo: "\n//Está localizado a " + MESH.pfuel + " sectores al " + MESH.pdirection + " y tiene " + MESH.Totzones + " zonas.//",
-				group: "\n \n**Grupo propuesto y equipo: **",
-				gains: "\n \n**Posibles ganancias: **",
-				o2: "\nHasta " + MESH.maxoxygen + " unidades de :o2:.",
-				fuel: "\nHasta " + MESH.maxfuel + " unidades de :fuel:.",
-				artefact: "\nHasta " + MESH.artefact + " artefacto(s) alien.",
-				map: "\nHasta " + MESH.mapfragment + " fragmento(s) de mapa.",
-				steak: "\nHasta " + MESH.maxsteaks + " bistec(s) alien.",
-				fruit: "\nHasta " + MESH.maxfruits + " fruto(s) alien.",
-				risks: "\n \n**Posibles riesgos: **",
-				groupdeath: "\nHasta " + MESH.groupdeath + " zona(s) de muerte del grupo.",
-				death: "\nHasta " + MESH.death + " tripulante(s) muerto(s) en el acto.",
-				accident: "\nHasta " + MESH.accident[0] + " - " + MESH.accident[1] + " :pv: de daño por accidente.",
-				fight: "\nHasta " + MESH.fightzones + " combate(s) con hasta " + MESH.fight[0] + " de fuerza. ",
-				fatigue: "\nHasta " + MESH.fatigue + " :pv: de daño por fatiga.",
-				mushtrap: "\nHasta " + MESH.mushtrap + " trampa(s) mush.",
-				lost: "\nHasta " + MESH.mia + " tripulante(s) perdido(s)",
-				illness: "\nHasta " + MESH.illness + " enfermedad(es) contraída(s).",
-				objlost: "\nHasta " + MESH.itemlost + " objeto(s) perdido(s).",
-				finnish: "\nHasta " + MESH.return + " zona(s) de regreso a nave.",
-				wander: "\nHasta " + MESH.wander + " zona(s) errante(s)",
-			};
+			MESH.lang = 'fr';
 	}	// END SWITCH
-};	// END FUNCTION - MESH.lang
-
-MESH.heroes = ["jin_su", "frieda", "kuan_ti", "janice", "roland", "hua", "paola", "chao", "finola",
-			"stephen", "ian", "chun", "raluca", "gioele", "eleesha", "terrence", "andie", "derek"];
-MESH.TagURL = "/img/icons/astro/tag_";
+	try {
+		var translationText = GM_getResourceText('translation:'+ MESH.lang);
+		if (typeof translationText === 'undefined') {
+			console.warn("No translations for '" + MESH.lang + "' languaje.");
+			return;
+		}
+		var translationData = JSON.parse(translationText);
+		i18next.init(translationData);
+		i18next.changeLanguage(MESH.lang);
+	} catch(err) {
+		console.error("Error getting translation data:", err);
+	}
+};	// END FUNCTION - MESH.initLang
 
 MESH.MakeInput = function(content, src, imgheight, tiptitle, tipdesc) {
 	var div = $('<div>');
@@ -438,7 +83,7 @@ MESH.MakeInput = function(content, src, imgheight, tiptitle, tipdesc) {
 
 MESH.initWindow = function() {
 	// ----------------- WINDOW ----------------- //
-	var window = $('<div>')
+	var win = $('<div>')
 		.attr('id', 'MESH')
 		.attr('tabindex', '-1')
 		.addClass('ui-dialog ui-widget ui-widget-content')
@@ -447,7 +92,7 @@ MESH.initWindow = function() {
 	// ----------------- TITLE ----------------- //
 	var wintitle = $('<div></div>::before')
 		.addClass('ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix')
-		.appendTo(window);
+		.appendTo(win);
 	$('<span>' + MESH.Title + '</span>')
 		.addClass('ui-dialog-title MESH-title')
 		.appendTo(wintitle);
@@ -463,9 +108,9 @@ MESH.initWindow = function() {
 		.addClass('ui-icon ui-icon-closethick')
 		.appendTo(wina);
 	// ----------------- DRAGGABLE ----------------- //
-	window.draggable({ handle: ".ui-dialog-titlebar" });
+	win.draggable({ handle: ".ui-dialog-titlebar" });
 	// ----------------- CONTENT ----------------- //
-	var divform = $('<div>').appendTo(window);
+	var divform = $('<div>').appendTo(win);
 	var form = $('<form>').attr('id', 'MESH-form').appendTo(divform);
 	var planet = $('<div>').addClass('MESH-planet MESHfloat').appendTo(form);
 	var astrotags = $('<div>').addClass('MESH-astrotags MESHfloat').appendTo(form);
@@ -474,7 +119,7 @@ MESH.initWindow = function() {
 	MESH.astroinfo(planet, astrotags);
 	MESH.exploHeroes(exploheroes);
 	MESH.generatext(output);
-
+	// ----------------- SELECT INPUT ON CLICK ----------------- //
 	$('#MESH-form input, #MESH-form textarea').on('click', function() {
 		$(this).focus();
 		$(this).select();
@@ -492,20 +137,23 @@ MESH.OpenWindow = function() {
 
 MESH.astroinfo = function(pdata, astrotags) {
 	// ----------------- PLANET DATA ----------------- //
-	$('<div><span>Planeta: </span><input type="text" name="pname" maxlength="23" tid_default="Nombre del Planeta"></div>').appendTo(pdata);
+	var pdiv = $('<div>').appendTo(pdata);
+	$('<span>' + i18next.t('planet.title') + ': </span>').appendTo(pdiv);
+	$('<input>').attr('type', 'text').attr('name', 'pname').attr('maxlength', '23').attr('tid_default', i18next.t('planet.default')).appendTo(pdiv);
 	var pdir = $('<div><span>Dirección: </span></div>').appendTo(pdata);
 	var pdirsel = $('<select name="pdirection"></select>').appendTo(pdir);
-		// TODO: multilingual (for loop)
-		$('<option value="" selected>').appendTo(pdirsel);
-		$('<option value="norte">Norte</option>').appendTo(pdirsel);
-		$('<option value="sur">Sur</option>').appendTo(pdirsel);
-		$('<option value="este">Este</option>').appendTo(pdirsel);
-		$('<option value="oeste">Oeste</option>').appendTo(pdirsel);
+		$('<option value="" selected>-----</option>').appendTo(pdirsel);
+		$('<option value="north">' + i18next.t('direction.north') + '</option>').appendTo(pdirsel);
+		$('<option value="south">' + i18next.t('direction.south') + '</option>').appendTo(pdirsel);
+		$('<option value="east">' + i18next.t('direction.east') + '</option>').appendTo(pdirsel);
+		$('<option value="west">' + i18next.t('direction.west') + '</option>').appendTo(pdirsel);
 	$('<div><span>Combustible: </span><input name="pfuel" type="number" min="0" max="9" value="0"></div>').appendTo(pdata);
 	// ----------------- ASTRO ----------------- //
-	for (var itag in MESH.astroTags) {
+	var itag = 0;
+	for (var index in MESH.astroTags) {
+		itag = MESH.astroTags[index];
 		MESH.MakeInput($('<input type="number" name="' + itag + '" min="0" max="9" value="0">'),
-			'/img/icons/astro/tag_' + itag + '.png', 34, MESH.astroTags[itag], MESH.astroTagsdesc[itag]).appendTo(astrotags);
+			'/img/icons/astro/tag_' + itag + '.png', 34, i18next.t(itag+'.title'), i18next.t(itag+'.desc')).appendTo(astrotags);
 	}
 };	// END FUNCTION - MESH.astroinfo
 
@@ -514,15 +162,16 @@ MESH.herobag = function(divhero, pos) {
 	for (var i = 0; i < 3; i++) {
 		var lisel = $('<li>').addClass('MESH-bag').appendTo(herobag);
 		var select = $('<select name="item' + i + 'hero' + pos + '">').appendTo(lisel);
-		$('<option value="" selected>').appendTo(select);
+		$('<option value="" selected>---lista de objetos---</option>').appendTo(select);
 		var group = 0, optgroup = 0;
-		// TODO: multilingual
-		var eqpt = $('<optgroup>').attr('label', 'Equipamiento').appendTo(select);
-		var guns = $('<optgroup>').attr('label', 'Armamento').appendTo(select);
-		for (var item in MESH.items) {
+		var eqpt = $('<optgroup>').attr('label', i18next.t('equipment')).appendTo(select);
+		var guns = $('<optgroup>').attr('label', i18next.t('weaponry')).appendTo(select);
+		var item = 0;
+		for (var index in MESH.items) {
+			item = MESH.items[index];
 			if (group < 9) { optgroup = eqpt; }
 			else { optgroup = guns; }
-			$('<option value="' + MESH.items[item] + '">' + MESH.items[item] + '</option>').appendTo(optgroup);
+			$('<option value="' + item + '">' + i18next.t(item + '.title') + '</option>').appendTo(optgroup);
 			group++;
 		}
 	}
@@ -530,9 +179,11 @@ MESH.herobag = function(divhero, pos) {
 
 MESH.heroskills = function(addTo, pos) {
 	var divskills = $('<div>').addClass('MESH-skills MESHfloat').appendTo(addTo);
-	for (var skill in MESH.skills) {
+	var skill = 0;
+	for (var index in MESH.skills) {
+		skill = MESH.skills[index];
 		MESH.MakeInput($('<input type="checkbox" name="' + skill + pos + '" value="' + skill + '">'),
-			'/img/icons/skills/' + skill + '.png', 21, MESH.skills[skill], MESH.skillsdesc[skill]).appendTo(divskills);
+			'/img/icons/skills/' + skill + '.png', 21, i18next.t(skill + '.title'), i18next.t(skill + '.desc')).appendTo(divskills);
 	}
 };	// END FUNCTION - MESH.heroskills
 
@@ -544,7 +195,7 @@ MESH.exploHeroes = function(addTo) {
 		var divhero = $('<div>').addClass('MESH-heroname MESHfloat').appendTo(liHeroes);
 		$('<span>Héroe ' + (i+1) + ': </span>').addClass('MESHfloat').appendTo(divhero);
 		var select = $('<select name="hero' + i + '">').addClass('MESHfloat').appendTo(divhero);
-		$('<option value="" selected>').appendTo(select);
+		$('<option value="" selected>--héroe--</option>').appendTo(select);
 		for (var hero in MESH.heroes) {
 			$('<option value="' + MESH.heroes[hero] + '">' + MESH.heroes[hero].replace("_", " ").capitalize() + '</option>').appendTo(select);
 		}
@@ -577,60 +228,59 @@ MESH.exploHeroes = function(addTo) {
 				survivalndd += parseInt($('input[name="' + tag + '"]').val());
 			}
 		}
-		
+
 		// postit
-		if ( numz['intelligent'] || numz['strong_wind'] ) {
-			$('option[value="' + MESH.items['postit'] + '"]').addClass('recommended');
+		if ( numz.intelligent || numz.strong_wind ) {
+			$('option[value="postit"]').addClass('recommended');
 		}
-		else { $('option[value="' + MESH.items['postit'] + '"]').removeClass('recommended'); }
+		else { $('option[value="postit"]').removeClass('recommended'); }
 		// space_suit
-		if ( !numz['oxygen'] ) {
-			$('option[value="' + MESH.items['space_suit'] + '"]').addClass('recommended');
+		if ( !numz.oxygen ) {
+			$('option[value="space_suit"]').addClass('recommended');
 		}
-		else { $('option[value="' + MESH.items['space_suit'] + '"]').removeClass('recommended'); }
+		else { $('option[value="space_suit"]').removeClass('recommended'); }
 		// trad_module & white_flag
-		if ( numz['intelligent'] ) {
-			$('option[value="' + MESH.items['trad_module'] + '"]').addClass('recommended');
-			$('option[value="' + MESH.items['white_flag'] + '"]').addClass('recommended');
+		if ( numz.intelligent ) {
+			$('option[value="trad_module"]').addClass('recommended');
+			$('option[value="white_flag"]').addClass('recommended');
 		}
 		else {
-			$('option[value="' + MESH.items['trad_module'] + '"]').removeClass('recommended');
-			$('option[value="' + MESH.items['white_flag'] + '"]').removeClass('recommended');
+			$('option[value="trad_module"]').removeClass('recommended');
+			$('option[value="white_flag"]').removeClass('recommended');
 		}
 		// driller
-		if ( numz['hydrocarbon'] || numz['cave'] || numz['mountain'] || numz['wreck'] ) {
-			$('option[value="' + MESH.items['driller'] + '"]').addClass('recommended');
+		if ( numz.hydrocarbon || numz.cave || numz.mountain || numz.wreck ) {
+			$('option[value="driller"]').addClass('recommended');
 		}
-		else { $('option[value="' + MESH.items['driller'] + '"]').removeClass('recommended'); }
+		else { $('option[value="driller"]').removeClass('recommended'); }
 		// echo_sounder
-		if ( numz['hydrocarbon'] ) {
-			$('option[value="' + MESH.items['echo_sounder'] + '"]').addClass('recommended');
+		if ( numz.hydrocarbon ) {
+			$('option[value="echo_sounder"]').addClass('recommended');
 		}
-		else { $('option[value="' + MESH.items['echo_sounder'] + '"]').removeClass('recommended'); }
+		else { $('option[value="echo_sounder"]').removeClass('recommended'); }
 		// quad_compass
-		if ( numz['desert'] || numz['forest'] || numz['cave'] || numz['cold'] || numz['cristal_field'] || numz['ocean'] ) {
-			$('option[value="' + MESH.items['quad_compass'] + '"]').addClass('recommended');
+		if ( numz.desert || numz.forest || numz.cave || numz.cold || numz.cristal_field || numz.ocean ) {
+			$('option[value="quad_compass"]').addClass('recommended');
 		}
-		else { $('option[value="' + MESH.items['quad_compass'] + '"]').removeClass('recommended'); }
+		else { $('option[value="quad_compass"]').removeClass('recommended'); }
 		// rope
-		if ( numz['sismic_activity'] || numz['cave'] || numz['mountain'] ) {
-			$('option[value="' + MESH.items['rope'] + '"]').addClass('recommended');
+		if ( numz.sismic_activity || numz.cave || numz.mountain ) {
+			$('option[value="rope"]').addClass('recommended');
 		}
-		else { $('option[value="' + MESH.items['rope'] + '"]').removeClass('recommended'); }
+		else { $('option[value="rope"]').removeClass('recommended'); }
 		// heat_seeker
-		if (( numz['insect'] || numz['intelligent'] || numz['predator'] || numz['ruminant'] ) && numz['mankarog'] === 0 ) {
-			$('option[value="' + MESH.items['heat_seeker'] + '"]').addClass('recommended');
+		if (( numz.insect || numz.intelligent || numz.predator || numz.ruminant ) && numz.mankarog === 0 ) {
+			$('option[value="heat_seeker"]').addClass('recommended');
 		}
-		else { $('option[value="' + MESH.items['heat_seeker'] + '"]').removeClass('recommended'); }
+		else { $('option[value="heat_seeker"]').removeClass('recommended'); }
 		// weapons
-		if ( numz['insect'] || numz['intelligent'] || numz['mankarog'] || numz['predator'] || numz['ruminant']
-				|| numz['cristal_field'] || numz['ruins']  || numz['wreck']  ) {
-			// TODO: Multilingual [label]
-			$('optgroup[label="Armamento"] > option').addClass('recommended');
+		if ( numz.insect || numz.intelligent || numz.mankarog || numz.predator || numz.ruminant || numz.cristal_field || numz.ruins  || numz.wreck  ) {
+			$('optgroup[label="' + i18next.t('weaponry') + '"] > option').addClass('recommended');
 			$('input[value="diplomacy"]').parent().addClass('recommended');
 			$('input[value="gunman"]').parent().addClass('recommended');
+			// If hero is diplomat wapons are not needed
 			if ( $('input[name^="diplomacy"]').is(':checked') ) {
-				$('optgroup[label="Armamento"] > option').removeClass('recommended');
+				$('optgroup[label="' + i18next.t('weaponry') + '"] > option').removeClass('recommended');
 			}
 		}
 		else {
@@ -640,7 +290,7 @@ MESH.exploHeroes = function(addTo) {
 			$('input[value="gunman"]').parent().removeClass('recommended');
 		}
 		// botanic
-		if ( numz['hot'] || numz['forest'] || numz['mountain'] || numz['fruit_trees'] || numz['swamp'] ) {
+		if ( numz.hot || numz.forest || numz.mountain || numz.fruit_trees || numz.swamp ) {
 			$('input[value="botanic"]').parent().addClass('recommended');
 		}
 		else { $('input[value="botanic"]').parent().removeClass('recommended'); }
@@ -682,13 +332,16 @@ MESH.varsinit = function() {
 	MESH.maxoxygen = 0;
 	MESH.return = 0;
 	MESH.wander = 0;
-	
+
 	MESH.botanic = 0;
 	MESH.diplomacy = 0;
 	MESH.gunman = 0;
 	MESH.sprint = 0;
 	MESH.survival = 0;
 	MESH.skilful = 0;	// TODO: Need to include in html (polyvalent)
+
+	var isBlaster = '';
+	var ifblaster = '';
 };	// END FUNCTION - MESH.varsinit
 
 MESH.calcs = function() {
@@ -697,15 +350,15 @@ MESH.calcs = function() {
 	MESH.varsinit();
 	MESH.pname = $('[name="pname"]').val().capitalize();
 	MESH.pfuel = $('[name="pfuel"]').val();
-	MESH.pdirection = $('[name="pdirection"]').val();
-	
+	MESH.pdirection = i18next.t('direction.' + $('[name="pdirection"]').val());
+
 	$('.MESH-heroes').each(function(index) {
 		if ( $('input[name="botanic' + index + '"]').is(':checked') ) { MESH.botanic += 1; }
 		if ( $('input[name="diplomacy' + index + '"]').is(':checked') ) { MESH.diplomacy = 1; }
 		if ( $('input[name="gunman' + index + '"]').is(':checked') ) {
 			for (var i = 0; i < 4; i++) {
-				var ifblaster = $('li select[name$="' + i + 'hero' + index + '"]').val();
-				var isBlaster = (ifblaster == 'Blaster') ? ifblaster : isBlaster;
+				ifblaster = $('li select[name$="' + i + 'hero' + index + '"]').val();
+				isBlaster = (ifblaster == 'Blaster') ? ifblaster : isBlaster;
 			}
 			if ( isBlaster == 'Blaster' ) { MESH.gunman += 1; }
 		}
@@ -714,12 +367,13 @@ MESH.calcs = function() {
 		// TODO: Need to add "Polyvalent" checkbox
 		if ( $('input[name="skilful' + index + '"]').is(':checked') ) { MESH.skilful += 1; }
 	});
-
-	for (var zone in MESH.astroTags) {
+	var zone = 0;
+	for (var index in MESH.astroTags) {
+		zone = MESH.astroTags[index];
 		var zonval = parseInt($('.MESH-astrotags input[name="' + zone + '"]').val());
 		MESH.Totzones += zonval;
 		if (zonval !== 0) {
-			MESH.zones.push(zonval + 'x ' + MESH.astroTags[zone]);
+			MESH.zones.push(zonval + 'x ' + i18next.t(zone + '.title'));
 		}
 		// Pump
 		if (zone == 'oxygen') {
@@ -761,7 +415,7 @@ MESH.calcs = function() {
 			MESH.death += zonval;
 		}
 		// Accident
-		if (zone == 'insect' || zone == 'predator' || zone == 'ruminant' || zone == 'hot' || 
+		if (zone == 'insect' || zone == 'predator' || zone == 'ruminant' || zone == 'hot' ||
 			zone == 'cold' || zone == 'sismic_activity' || zone == 'cave' || zone == 'mountain' || zone == 'ruins') {
 			MESH.accident[0] += 3*zonval;
 			MESH.accident[1] += 5*zonval;
@@ -815,67 +469,72 @@ MESH.calcs = function() {
 
 MESH.textarea = function() {
 	MESH.calcs();
-	MESH.lang();
-	var text = '';
-	text += MESH.msglang.msgtitle;
-	text += MESH.msglang.msginfo;
+//	MESH.initLang();
+	var text = i18next.t('txt.title', {p_name: MESH.pname});
+	text += i18next.t('txt.info', {p_fuel: MESH.pfuel, p_dir: MESH.pdirection, zones: MESH.Totzones});
 	text += '\n' + MESH.zones.join(', ');
-	text += MESH.msglang.group;
-	for (var ghero in MESH.group) {
-		if (MESH.group[ghero] !== "") {
-			text += '\n**' + MESH.group[ghero] + '** - ';
-			if (MESH.bag0[ghero] !== "") {
-				text += '//' + MESH.bag0[ghero] + '//';
+	text += i18next.t('txt.group');
+	for (var hero in MESH.group) {
+		if (MESH.group[hero] !== "") {
+			text += '\n**' + MESH.group[hero] + '** - ';
+			if (MESH.bag0[hero] !== "") {
+				text += '//' + i18next.t(MESH.bag0[hero] + '.title') + '//';
 			}
-			if (MESH.bag1[ghero] !== "") {
-				text += ', //' + MESH.bag1[ghero] + '//';
+			if (MESH.bag1[hero] !== "") {
+				text += ', //' + i18next.t(MESH.bag1[hero] + '.title') + '//';
 			}
-			if (MESH.bag2[ghero] !== "") {
-				text += ', //' + MESH.bag2[ghero] + '//';
+			if (MESH.bag2[hero] !== "") {
+				text += ', //' + i18next.t(MESH.bag2[hero] + '.title') + '//';
 			}
 		}
 	}
-	text += MESH.msglang.gains;
-	text += MESH.maxoxygen ? MESH.msglang.o2 : '';
-	text += MESH.maxfuel ? MESH.msglang.fuel : '';
-	text += MESH.artefact ? MESH.msglang.artefact : '';
-	text += MESH.mapfragment ? MESH.msglang.map : '';
-	text += MESH.maxsteaks ? MESH.msglang.steak : '';
-	text += MESH.maxfruits ? MESH.msglang.fruit : '';
+	text += i18next.t('txt.gains');
+	text += MESH.maxoxygen ? i18next.t('txt.o2', { maxoxygen: MESH.maxoxygen }) : '';
+	text += MESH.maxfuel ? i18next.t('txt.fuel', { maxfuel: MESH.maxfuel }) : '';
+	text += MESH.artefact ? i18next.t('txt.artefact', { count: MESH.artefact }) : '';
+	text += MESH.mapfragment ? i18next.t('txt.map', { count: MESH.mapfragment }) : '';
+	text += MESH.maxsteaks ? i18next.t('txt.steak', { count: MESH.maxsteaks }) : '';
+	text += MESH.maxfruits ? i18next.t('txt.fruit', { count: MESH.maxfruits }) : '';
 
-	text += MESH.msglang.risks;
-	text += MESH.groupdeath ? MESH.msglang.groupdeath : '';
-	text += MESH.death ? MESH.msglang.death : '';
-	text += MESH.accident[0] ? MESH.msglang.accident : '';
-	text += MESH.fightzones ? MESH.msglang.fight : '';
-	text += MESH.fatigue ? MESH.msglang.fatigue : '';
-	text += MESH.mushtrap ? MESH.msglang.mushtrap : '';
-	text += MESH.mia ? MESH.msglang.lost : '';
-	text += MESH.illness ? MESH.msglang.illness : '';
-	text += MESH.itemlost ? MESH.msglang.objlost : '';
-	text += MESH.return ? MESH.msglang.finnish : '';
-	text += MESH.wander ? MESH.msglang.wander : '';
+	text += i18next.t('txt.team', { strength: 1 });
+
+	text += i18next.t('txt.risks');
+	text += MESH.groupdeath ? i18next.t('txt.groupdeath', { count: MESH.groupdeath }) : '';
+	text += MESH.death ? i18next.t('txt.death', { count: MESH.death }) : '';
+//	text += MESH.health ? i18next.t('txt.health', { maxfuel: MESH.health }) : '';
+	text += MESH.accident[0] ? i18next.t('txt.accident', { accident1: MESH.accident[0], accident2: MESH.accident[1] }) : '';
+	text += MESH.fatigue ? i18next.t('txt.fatigue', { fatigue: MESH.fatigue }) : '';
+	text += MESH.fightzones ? i18next.t('txt.fight', { count: MESH.fightzones, damage: MESH.fight[0] }) : '';
+	text += MESH.mushtrap ? i18next.t('txt.mushtrap', { count: MESH.mushtrap }) : '';
+	text += MESH.mia ? i18next.t('txt.lost', { count: MESH.mia }) : '';
+	text += MESH.illness ? i18next.t('txt.illness', { count: MESH.illness }) : '';
+	text += MESH.itemlost ? i18next.t('txt.objlost', { count: MESH.itemlost }) : '';
+	text += MESH.return ? i18next.t('txt.finnish', { count: MESH.return }) : '';
+	text += MESH.wander ? i18next.t('txt.wander', { count: MESH.wander }) : '';
 
 	$('#MESH-form textarea').val(text);
 };	// END FUNCTION - MESH.textarea
 
 MESH.generatext = function(addTo) {
 	var divbutt = $('<div>').addClass('divbutt MESHfloat').appendTo(addTo);
-	MESH.MakeButton('<img src="http://data.twinoid.com/img/icons/edit.png" style="vertical-align: -20%"> Generar', null, null, 'Generar mensaje',
-			'Haz click después de configurar los datos del planeta, así como los tripulantes y objetos a llevar.')
+	// TODO: Multilingual title & description
+	MESH.MakeButton('<img src="http://data.twinoid.com/img/icons/edit.png" style="vertical-align: -20%"> ' + i18next.t('button.gen_txt'), null, null,
+			i18next.t('button.gen_title'), i18next.t('button.gen_desc'))
 		.appendTo(divbutt).find("a").on("mousedown", function(){
 			MESH.textarea();
 		});
 	divbutt = $('<div>').addClass('divbutt MESHfloat').appendTo(addTo);
-	MESH.MakeButton('<img src="http://data.twinoid.com/img/icons/done.png" style="vertical-align: -20%"> Copiar', null, null, 'Copiar texto',
-			'Haz click para copiar el texto del mensaje en el portapapeles. Si no te funciona, selecciona el texto y presiona Ctrl+C.')
+	// TODO: Multilingual title & description
+	MESH.MakeButton('<img src="http://data.twinoid.com/img/icons/done.png" style="vertical-align: -20%"> ' + i18next.t('button.cpy_txt'), null, null,
+			i18next.t('button.cpy_title'), i18next.t('button.cpy_desc'))
 		.appendTo(divbutt).find("a").on("mousedown", function(){
 			$('#MESH-form input, #MESH-form textarea').select();
 			document.execCommand('copy');
 		});
 	divbutt = $('<div>').addClass('divbutt MESHfloat').appendTo(addTo);
-	MESH.MakeButton('<img src="http://data.twinoid.com/img/icons/refresh.png" style="vertical-align: -20%"> Resetear', null, null, 'Resetear entradas',
-			'Haz click para poner por defecto todos los valores de los campos de entrada.')
+	// TODO: Multilingual title & description
+	MESH.MakeButton('<img src="http://data.twinoid.com/img/icons/refresh.png" style="vertical-align: -20%"> ' + i18next.t('button.rst_txt'), null, null,
+			i18next.t('button.rst_title'), i18next.t('button.rst_desc'))
 		.appendTo(divbutt).find("a").on("mousedown", function(){
 			document.getElementById("MESH-form").reset();
 			$('.recommended').removeClass('recommended');
@@ -1053,11 +712,11 @@ MESH.css = function() {
 };	// END FUNCTION - MESH.css
 
 MESH.init = function() {
+	MESH.initLang();
     MESH.varsinit();
-	MESH.lang();
 	MESH.css();
-	MESH.MakeButton('<img src="' + MESH.image + '" style="vertical-align: -20%"> ' + MESH.name, null, null, 'Asistente de expediciones',
-			'Genial para organizar una expedición exitosa. El equipo de desarrollo no garantiza el éxito de la expedición')
+	MESH.MakeButton('<img src="' + MESH.icon + '" style="vertical-align: -20%"> ' + MESH.name, null, null, i18next.t('button.title'),
+			i18next.t('button.desc'))
 		.insertAfter('#updatebtn').find("a").on("mousedown", function(){
 			MESH.OpenWindow();	// TODO: MESH.OpenWindow();
 				});

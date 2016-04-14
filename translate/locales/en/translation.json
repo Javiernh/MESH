@@ -1,0 +1,549 @@
+{"lng": "en", "resources": { "en": { "translation": {
+"button": {
+	"title"
+	: "Exploration helper"
+	,
+	"desc"
+	: "Great to plan an exploration successfully. The development team does not guarantee the mission success."
+	,
+	"gen_txt"
+	: "Generate"
+	,
+	"gen_title"
+	: "Generate report"
+	,
+	"gen_desc"
+	: "Click to generate the planet exploration report. Make sure you have correctly filled the planet data, heroes and backpack."
+	,
+	"cpy_txt"
+	: "Copy"
+	,
+	"cpy_title"
+	: "Copy report"
+	,
+	"cpy_desc"
+	: "Click to copy the planet exploration report to the clipboard. If it does not work, select the text and press Ctrl + C."
+	,
+	"rst_txt"
+	: "Reset"
+	,
+	"rst_title"
+	: "Reset inputs"
+	,
+	"rst_desc"
+	: "Click to set default values for all input fields."
+}
+,
+"planet": {
+	"title"
+	: "Planet"
+	,
+	"default"
+	: "Planet name"
+}
+,
+"direction": {
+	"title"
+	: "Direction"
+	,
+	"north"
+	: "North"
+	,
+	"south"
+	: "South"
+	,
+	"east"
+	: "East"
+	,
+	"west"
+	: "West"
+}
+,
+"fuel"
+: "Fuel"
+,
+"oxygen": {
+	"title"
+	: "Oxygen"
+	,
+	"desc"
+	: ""
+}
+,
+"hydrocarbon": {
+	"title"
+	: "Hydrocarbon Deposits"
+	,
+	"desc"
+	: ""
+}
+,
+"insect": {
+	"title"
+	: "Insects"
+	,
+	"desc"
+	: ""
+}
+,
+"intelligent": {
+	"title"
+	: "Intelligent Life"
+	,
+	"desc"
+	: ""
+}
+,
+"mankarog": {
+	"title"
+	: "Mankarogs"
+	,
+	"desc"
+	: ""
+}
+,
+"predator": {
+	"title"
+	: "Predators"
+	,
+	"desc"
+	: ""
+}
+,
+"ruminant": {
+	"title"
+	: "Ruminants"
+	,
+	"desc"
+	: ""
+}
+,
+"hot": {
+	"title"
+	: "High Temperatures"
+	,
+	"desc"
+	: ""
+}
+,
+"cold": {
+	"title"
+	: "Low Temperatures"
+	,
+	"desc"
+	: ""
+}
+,
+"sismic_activity": {
+	"title"
+	: "Seismic Activity"
+	,
+	"desc"
+	: ""
+}
+,
+"strong_wind": {
+	"title"
+	: "Strong Winds"
+	,
+	"desc"
+	: ""
+}
+,
+"volcanic_activity": {
+	"title"
+	: "Volcanoes"
+	,
+	"desc"
+	: ""
+}
+,
+"cave": {
+	"title"
+	: "Caverns"
+	,
+	"desc"
+	: ""
+}
+,
+"cristal_field": {
+	"title"
+	: "Cristalite"
+	,
+	"desc"
+	: ""
+}
+,
+"desert": {
+	"title"
+	: "Desert"
+	,
+	"desc"
+	: ""
+}
+,
+"forest": {
+	"title"
+	: "Forest"
+	,
+	"desc"
+	: ""
+}
+,
+"mountain": {
+	"title"
+	: "Mountains"
+	,
+	"desc"
+	: ""
+}
+,
+"ocean": {
+	"title"
+	: "Oceanic"
+	,
+	"desc"
+	: ""
+}
+,
+"fruit_trees": {
+	"title"
+	: "Orchard"
+	,
+	"desc"
+	: ""
+}
+,
+"ruins": {
+	"title"
+	: "Ruins"
+	,
+	"desc"
+	: ""
+}
+,
+"wreck": {
+	"title"
+	: "Shipwreck"
+	,
+	"desc"
+	: ""
+}
+,
+"swamp": {
+	"title"
+	: "Swamp"
+	,
+	"desc"
+	: ""
+}
+,
+"heroe"
+: "Hero {{num}}:"
+,
+"botanic": {
+	"title"
+	: "Botanist"
+	,
+	"desc"
+	: "Capable of distinguishing the characteristics of the various plants and fruits. They are also equally effective when maintaining the garden.<ul><li>Can read the <strong>fruit nutrition information</strong>.</li><li>Can read <strong>plant properties</strong>.</li><li>Can carry out <strong>transplants</strong>.</li><li>+2 <img src='/img/icons/ui/pa_garden.png' alt='gard'/> per day (<strong>Gardening</strong> Action Points).</li><li>Expedition: The <strong>harvest</strong> action gives an additional fruit.</li><li>Bonus for developing certain <strong>NERON projects</strong>.</li></ul>"
+}
+,
+"diplomacy": {
+	"title"
+	: "Diplomat"
+	,
+	"desc"
+	: "A good diplomat knows how to communicate effectively with extra-terrestrials.<ul><li>Eliminates the chance of encountering hostility from extra-terrestrials.</li><li>Can declare a ceasefire once per game.</li></ul>"
+}
+,
+"gunman": {
+	"title"
+	: "Shooter"
+	,
+	"desc"
+	: "At ease handling all kinds of weapons<ul><li>+2 <strong>Free Shots</strong> <img src='/img/icons/ui/pa_shoot.png' alt='shoot'/> per day.</li><li>Your off-target shots cause 2 times fewer accidents.</li><li>Your successful shots cause 2 times as many critical hits.</li><li>Bonus +1 to expedition combat strangth.</li><li>Bonus for developing certain <strong>NERON projects</strong>.</li></ul>"
+}
+,
+"sprint": {
+	"title"
+	: "Sprinter"
+	,
+	"desc"
+	: "The Sprinter always puts their best foot forward! They get additional Movement Points.<ul><li>You earn an additional 2 <img class='paslot' src='/img/icons/ui/pa_slot2.png' alt='pm'/> every time you convert <img class='paslot' src='/img/icons/ui/pa_slot1.png' alt='pa' />-<img class='paslot' src='/img/icons/ui/pa_slot2.png' alt='pm'/> (does not stack with <strong>Scooter</strong>).</li><li>Expeditions involving a Sprinter will allow an additional planetary zone to be explored</li></ul>"
+}
+,
+"survival": {
+	"title"
+	: "Survivalist"
+	,
+	"desc"
+	: "The Survivalist is great to have on exploration missions. They can defend themselves more effectively against extra-terrestrial life forms and generally deal with these encounters better than anyone else.<ul><li>Expedition : All damage is <strong>reduced by one point</strong>. </li><li>Expedition : The action <strong>Provision</strong> gives one additional steak.</li><li>Expedition : Last to die if a team fatality occurs.</li></ul>"
+}
+,
+"skilful": {
+	"title"
+	: "Polyvalent"
+	,
+	"desc"
+	: "You have skills, they're always useful...<ul><li>You are considered a <strong>Botanist</strong>, <strong>Diplomat</strong> and <strong>Biologist</strong> but you don't have their actions or resources.</li></ul>"
+}
+,
+"pilot": {
+	"title"
+	: "Pilot"
+	,
+	"desc"
+	: "An expert in manoeuvring the Icarus, Pasiphae and Patroller craft. Their aerial mastery is impressive.<ul><li>Has <strong>Mad Pilot Skills</strong>.</li><li><strong>Never misses</strong> landings or takeoffs.</li><li>Bonus for developing certain <strong>NERON projects</strong>.</li></ul>"
+}
+,
+"bag"
+: "Bag:"
+,
+"equipment"
+: "Equipment"
+,
+"postit": {
+	"title"
+	: "Post-it"
+	,
+	"desc"
+	: ""
+}
+,
+"space_suit": {
+	"title"
+	: "Spacesuit"
+	,
+	"desc"
+	: "The spacesuit allows crew members to explore planets without oxygen.<ul><li>Allows you to survive after being ejected into space and breathe on planets with no oxygen.</li></ul>"
+}
+,
+"trad_module": {
+	"title"
+	: "Babel Module"
+	,
+	"desc"
+	: "A universal translation module."
+}
+,
+"driller": {
+	"title"
+	: "Drill"
+	,
+	"desc"
+	: "The drill lets you recover minerals on expeditions.<ul><li>Expedition : Doubles the gain form \"Hydrocarbon\" events.</li></ul>"
+}
+,
+"echo_sounder": {
+	"title"
+	: "EchoLocator"
+	,
+	"desc"
+	: "The Echo-locator is useful for exploratory missions. It allows its user to detect movement in their immediate surroundings.<ul><li>Expedition : 5x Chance of discovering a remaining \"Hydrocarbon\" sector</li></ul>"
+}
+,
+"quad_compass": {
+	"title"
+	: "Quadrimetric Compass"
+	,
+	"desc"
+	: "The quadrimetric compass is most useful on missions.<ul><li>Expedition : Protects the group from \"Wandering\" events.</li><li>Expedition : Prevents you from getting \"lost\".</li></ul>"
+}
+,
+"rope": {
+	"title"
+	: "Rope"
+	,
+	"desc"
+	: "On expeditions, the rope allows you to get out of an impass.<ul><li>Expedition : Removes possibility of personal damage which could hapen in \"Seismic\", \"Grotto\" and \"Mountain\" areas, but does not prevent sudden deaths.</li></ul>"
+}
+,
+"heat_seeker": {
+	"title"
+	: "Thermosensor"
+	,
+	"desc"
+	: "Facilitates exploration by detecting nearby heat signatures.<ul><li>Expedition : 5x Chance of finding a remaining \"Ruminant\", \"Predator\", \"Intelligent life\", \"Mankarog\", or \"Insect\" sector.</li></ul>"
+}
+,
+"white_flag": {
+	"title"
+	: "White Flag"
+	,
+	"desc"
+	: "The white flag is a universal symbol of peace. Well, more or less...<ul><li>Expedition : Removes the possibility of combat occurring in a sector containing \"Intelligent Life\".</li></ul>"
+}
+,
+"weaponry"
+: "Weaponry"
+,
+"blaster": {
+	"title"
+	: "Blaster"
+	,
+	"desc"
+	: "The standard-issue sidearm of security forces.<ul><li>Expedition: + 1 added to the strength of your team during combats.</li></ul>"
+}
+,
+"knife": {
+	"title"
+	: "Knife"
+	,
+	"desc"
+	: "The knife is a weapon, which although a little dated, still has plenty of fans.<ul><li>Expedition : + 1 added to the strength of your team during combats.</li></ul>"
+}
+,
+"natamy_riffle": {
+	"title"
+	: "Natamy Rifle"
+	,
+	"desc"
+	: "The Natamy Rifle is an anti-Mush assault rifle.<ul><li>Expedition: + 1 added to the strength of your team during combats.</li></ul>"
+}
+,
+"items_decoup_05": {
+	"title"
+	: "Lizaro Jungle"
+	,
+	"desc"
+	: "The ultimate in precision rifles.<ul><li>Expedition: +1 added to the strength of your team during combats.</li></ul>"
+}
+,
+"machine_gun": {
+	"title"
+	: "Old Faithful"
+	,
+	"desc"
+	: "The machine gun is an extremely heavy weapon. Certain international laws prohibit its use against humans. When you see it, you'll know why. Some call it 'Old painless' but that depends on which side you're at...<ul><li>Expedition : + 2 added to the strength of your team during combats.</li></ul>"
+}
+,
+"missile_launcher": {
+	"title"
+	: "Rocket Launcher"
+	,
+	"desc"
+	: "Highly sophisticated weapon for those who aren't.<ul><li>Expedition: + 3 added to the strength of your team during combats.</li><li>The rocket launcher has long been an integral part of of the arsenal of expedition troops in hostile areas. The technology hasn't changed in hundreds of years. It has a particular cult, almost fetish-item, status amongst those who wield it...</li></ul>"
+}
+,
+"grenade": {
+	"title"
+	: "Grenade"
+	,
+	"desc"
+	: "The grenade will get you out of many difficult expedition situations...<ul><li>Expedition : +3 to the strength of your team in the event of combat.</li></ul>"
+}
+,
+"txt": {
+	"title"
+	: "**Expedition information for {{p_name}}.**"
+	,
+	"info"
+	: "\n//It is located {{p_fuel}} sectors to the {{p_dir}} and has {{zones}} zones.//"
+	,
+	"group"
+	: "\n \n**Proposed team and equipment: **"
+	,
+	"gains"
+	: "\n \n**Possible gains: **"
+	,
+	"o2"
+	: "\nUp to {{maxoxygen}} :o2: units."
+	,
+	"fuel"
+	: "\nUp to {{maxfuel}} :fuel: units."
+	,
+	"artefact"
+	: "\nUp to one artefact."
+	,
+	"artefact_plural"
+	: "\nUp to {{count}} artefacts."
+	,
+	"map"
+	: "\nUp to one map fragment."
+	,
+	"map_plural"
+	: "\nUp to {{count}} map fragments."
+	,
+	"steak"
+	: "\nUp to one steak."
+	,
+	"steak_plural"
+	: "\nUp to {{count}} steaks."
+	,
+	"fruit"
+	: "\nUp to one fruit."
+	,
+	"fruit_plural"
+	: "\nUp to {{count}} fruits."
+	,
+	"team"
+	: "\nTeam's strength {{strength}}."
+	,
+	"risks"
+	: "\n**Possible risks: **"
+	,
+	"groupdeath"
+	: "\nUp to one chance for a Team Death."
+	,
+	"groupdeath_plural"
+	: "\nUp to {{count}} chances for a Team Death."
+	,
+	"death"
+	: "\nUp to one member could die."
+	,
+	"death_plural"
+	: "\nUp to {{count}} members could die."
+	,
+	"health"
+	: "\nUp to {{health}} points of personal :pv: could be lost."
+	,
+	"accident"
+	: "\nUp to {{accident1}} - {{accident2}} :pv: could be lost by accident."
+	,
+	"fatigue"
+	: "\nUp to {{fatigue}} :pv: could be lost by fatigue."
+	,
+	"fight"
+	: "\nUp to one fight against {{damage}} of enemy strength."
+	,
+	"fight_plural"
+	: "\nUp to {{count}} fights against {{damage}} of enemy strength."
+	,
+	"mushtrap"
+	: "\nUp to one Mush Trap."
+	,
+	"mushtrap_plural"
+	: "\nUp to {{count}} Mush Traps."
+	,
+	"lost"
+	: "\nUp to one member could get lost."
+	,
+	"lost_plural"
+	: "\nUp to {{count}} members could get lost."
+	,
+	"illness"
+	: "\nUp to one illness could be contracted."
+	,
+	"illness_plural"
+	: "\nUp to Un {{count}} illnesses could be contracted."
+	,
+	"objlost"
+	: "\nUp to one item could be lost."
+	,
+	"objlost_plural"
+	: "\nUp to {{count}} items could be lost."
+	,
+	"finnish"
+	: "\nUp to one chance to forfeit the expedition."
+	,
+	"finnish_plural"
+	: "\nUp to {{count}} chances to forfeit the expedition."
+	,
+	"wander"
+	: "\nUp to one chance to wander."
+	,
+	"wander_plural"
+	: "\nUp to {{count}} chances to wander."
+}
+}}}}

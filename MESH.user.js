@@ -12,7 +12,7 @@
 // @resource	translation:es https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/es/translation.json
 // @resource	translation:en https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/en/translation.json
 // @resource	translation:fr https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/fr/translation.json
-// @version	0.3b
+// @version	0.4b
 // ==/UserScript==
 /* jshint -W043 */
 
@@ -140,14 +140,14 @@ MESH.astroinfo = function(pdata, astrotags) {
 	var pdiv = $('<div>').appendTo(pdata);
 	$('<span>' + i18next.t('planet.title') + ': </span>').appendTo(pdiv);
 	$('<input>').attr('type', 'text').attr('name', 'pname').attr('maxlength', '23').attr('tid_default', i18next.t('planet.default')).appendTo(pdiv);
-	var pdir = $('<div><span>Dirección: </span></div>').appendTo(pdata);
+	var pdir = $('<div><span>' + i18next.t('direction.title') + ': </span></div>').appendTo(pdata);
 	var pdirsel = $('<select name="pdirection"></select>').appendTo(pdir);
 		$('<option value="" selected>-----</option>').appendTo(pdirsel);
 		$('<option value="north">' + i18next.t('direction.north') + '</option>').appendTo(pdirsel);
 		$('<option value="south">' + i18next.t('direction.south') + '</option>').appendTo(pdirsel);
 		$('<option value="east">' + i18next.t('direction.east') + '</option>').appendTo(pdirsel);
 		$('<option value="west">' + i18next.t('direction.west') + '</option>').appendTo(pdirsel);
-	$('<div><span>Combustible: </span><input name="pfuel" type="number" min="0" max="9" value="0"></div>').appendTo(pdata);
+	$('<div><span>' + i18next.t('fuel') + ': </span><input name="pfuel" type="number" min="0" max="9" value="0"></div>').appendTo(pdata);
 	// ----------------- ASTRO ----------------- //
 	var itag = 0;
 	for (var index in MESH.astroTags) {
@@ -162,7 +162,7 @@ MESH.herobag = function(divhero, pos) {
 	for (var i = 0; i < 3; i++) {
 		var lisel = $('<li>').addClass('MESH-bag').appendTo(herobag);
 		var select = $('<select name="item' + i + 'hero' + pos + '">').appendTo(lisel);
-		$('<option value="" selected>---lista de objetos---</option>').appendTo(select);
+		$('<option value="" selected>-----</option>').appendTo(select);
 		var group = 0, optgroup = 0;
 		var eqpt = $('<optgroup>').attr('label', i18next.t('equipment')).appendTo(select);
 		var guns = $('<optgroup>').attr('label', i18next.t('weaponry')).appendTo(select);
@@ -193,13 +193,13 @@ MESH.exploHeroes = function(addTo) {
 //		var liHeroes = $('<li>').addClass('MESH-heroes').appendTo(ulHeroes);
 		var liHeroes = $('<div>').addClass('MESH-heroes').appendTo(addTo);
 		var divhero = $('<div>').addClass('MESH-heroname MESHfloat').appendTo(liHeroes);
-		$('<span>Héroe ' + (i+1) + ': </span>').addClass('MESHfloat').appendTo(divhero);
+		$('<span>' + i18next.t('heroe', { num: i+1 }) + ' </span>').addClass('MESHfloat').appendTo(divhero);
 		var select = $('<select name="hero' + i + '">').addClass('MESHfloat').appendTo(divhero);
-		$('<option value="" selected>--héroe--</option>').appendTo(select);
+		$('<option value="" selected>-----</option>').appendTo(select);
 		for (var hero in MESH.heroes) {
 			$('<option value="' + MESH.heroes[hero] + '">' + MESH.heroes[hero].replace("_", " ").capitalize() + '</option>').appendTo(select);
 		}
-		$('<span> Mochila: </span>').addClass('MESHfloat').appendTo(liHeroes);
+		$('<span> ' + i18next.t('bag') + ' </span>').addClass('MESHfloat').appendTo(liHeroes);
 		MESH.herobag(liHeroes, i);
 		MESH.heroskills(divhero, i);
 	}

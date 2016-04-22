@@ -12,7 +12,7 @@
 // @resource	translation:es https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/es/translation.json
 // @resource	translation:en https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/en/translation.json
 // @resource	translation:fr https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/fr/translation.json
-// @version	0.4b
+// @version	0.4.1b
 // ==/UserScript==
 /* jshint -W043 */
 
@@ -221,7 +221,8 @@ MESH.exploHeroes = function(addTo) {
 		var numz = [];
 		var sprintndd = 0;
 		var survivalndd = 0;
-		for (var tag in MESH.astroTags) {
+		for (var index in MESH.astroTags) {
+			var tag = MESH.astroTags[index];
 			numz[tag] = parseInt($('input[name="' + tag + '"]').val());
 			sprintndd += parseInt($('input[name="' + tag + '"]').val());
 			if ( tag != 'oxygen' && tag != 'hydrocarbon' && tag != 'volcanic_activity' && tag != 'forest' && tag != 'ocean' && tag != 'fruit_trees') {

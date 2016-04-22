@@ -32,7 +32,8 @@
 	,
 	"rst_desc"
 	: "Haz click para establecer por defecto todos los valores de los campos de entrada."
-},
+}
+,
 "planet": {
 	"title"
 	: "Planeta"
@@ -111,15 +112,15 @@
 ,
 "ruminant": {
 	"title"
-	: "Rumiantes"
+	: "Rumiante"
 	,
 	"desc"
-	: ""
+	: "Manada de rumiantes u otra forma animal."
 }
 ,
 "hot": {
 	"title"
-	: "Altas temperaturas"
+	: "Temperatura alta"
 	,
 	"desc"
 	: ""
@@ -127,10 +128,10 @@
 ,
 "cold": {
 	"title"
-	: "Bajas temperaturas"
+	: "Temperatura baja"
 	,
 	"desc"
-	: ""
+	: "Frío intenso que puede dificultar la expedición."
 }
 ,
 "sismic_activity": {
@@ -199,10 +200,10 @@
 ,
 "ocean": {
 	"title"
-	: "Oceano"
+	: "Océano"
 	,
 	"desc"
-	: ""
+	: "En el mar, la vida es más sabrosa..."
 }
 ,
 "fruit_trees": {

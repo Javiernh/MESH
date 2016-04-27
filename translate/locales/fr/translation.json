@@ -1,0 +1,552 @@
+{"lng": "fr", "resources": { "fr": { "translation": {
+"button": {
+	"title"
+	: "Exploration helper"
+	,
+	"desc"
+	: "Great to plan an exploration successfully. The development team does not guarantee the mission success."
+	,
+	"gen_txt"
+	: "Generate"
+	,
+	"gen_title"
+	: "Generate report"
+	,
+	"gen_desc"
+	: "Click to generate the planet exploration report. Make sure you have correctly filled the planet data, heroes and backpack."
+	,
+	"cpy_txt"
+	: "Copy"
+	,
+	"cpy_title"
+	: "Copy report"
+	,
+	"cpy_desc"
+	: "Click to copy the planet exploration report to the clipboard. If it does not work, select the text and press Ctrl + C."
+	,
+	"rst_txt"
+	: "Reset"
+	,
+	"rst_title"
+	: "Reset inputs"
+	,
+	"rst_desc"
+	: "Click to set default values for all input fields."
+}
+,
+"planet": {
+	"title"
+	: "Planet"
+	,
+	"default"
+	: "Planet name"
+}
+,
+"direction": {
+	"title"
+	: "Direction"
+	,
+	"north"
+	: "North"
+	,
+	"south"
+	: "South"
+	,
+	"east"
+	: "East"
+	,
+	"west"
+	: "West"
+}
+,
+"fuel"
+: "Fuel"
+,
+"oxygen": {
+	"title"
+	: "Oxygène"
+	,
+	"desc"
+	: ""
+}
+,
+"hydrocarbon": {
+	"title"
+	: "Hydro-Carbure"
+	,
+	"desc"
+	: ""
+}
+,
+"insect": {
+	"title"
+	: "Insecte"
+	,
+	"desc"
+	: ""
+}
+,
+"intelligent": {
+	"title"
+	: "Vie Intelligente"
+	,
+	"desc"
+	: ""
+}
+,
+"mankarog": {
+	"title"
+	: "Mankarog"
+	,
+	"desc"
+	: ""
+}
+,
+"predator": {
+	"title"
+	: "Prédateur"
+	,
+	"desc"
+	: ""
+}
+,
+"ruminant": {
+	"title"
+	: "Ruminant"
+	,
+	"desc"
+	: ""
+}
+,
+"hot": {
+	"title"
+	: "Température élevée"
+	,
+	"desc"
+	: ""
+}
+,
+"cold": {
+	"title"
+	: "Température basse"
+	,
+	"desc"
+	: ""
+}
+,
+"sismic_activity": {
+	"title"
+	: "Activité sismique"
+	,
+	"desc"
+	: ""
+}
+,
+"strong_wind": {
+	"title"
+	: "Vent fort"
+	,
+	"desc"
+	: ""
+}
+,
+"volcanic_activity": {
+	"title"
+	: "Activité volcanique"
+	,
+	"desc"
+	: ""
+}
+,
+"cave": {
+	"title"
+	: "Grotte"
+	,
+	"desc"
+	: ""
+}
+,
+"cristal_field": {
+	"title"
+	: "Cristalite"
+	,
+	"desc"
+	: ""
+}
+,
+"desert": {
+	"title"
+	: "Désert"
+	,
+	"desc"
+	: ""
+}
+,
+"forest": {
+	"title"
+	: "Forêt"
+	,
+	"desc"
+	: ""
+}
+,
+"mountain": {
+	"title"
+	: "Montagne"
+	,
+	"desc"
+	: ""
+}
+,
+"ocean": {
+	"title"
+	: "Océan"
+	,
+	"desc"
+	: ""
+}
+,
+"fruit_trees": {
+	"title"
+	: "Verger"
+	,
+	"desc"
+	: ""
+}
+,
+"ruins": {
+	"title"
+	: "Ruine"
+	,
+	"desc"
+	: ""
+}
+,
+"wreck": {
+	"title"
+	: "Epave"
+	,
+	"desc"
+	: ""
+}
+,
+"swamp": {
+	"title"
+	: "Marais"
+	,
+	"desc"
+	: ""
+}
+,
+"heroe"
+: "Hero {{num}}:"
+,
+"botanic": {
+	"title"
+	: "Botaniste"
+	,
+	"desc"
+	: "Le botaniste peut distinguer les caractéristiques des légumes et des plantes. Il est également redoutablement efficace dans la maintenance du Jardin.<ul><li>Peut lire les <strong>propriétés des fruits</strong>.</li><li>Peut lire les <strong>propriétés des plantes</strong>.</li><li>Peut effectuer des <strong>greffes</strong>.</li><li>+2 <img src=\'/img/icons/ui/pa_garden.png\' alt=\'gard\'/> par jour (points d\'action <strong>Jardinage</strong>).</li><li>Expédition : L\'év&egrave;nement <strong>Récolte</strong> donne un fruit de plus.</li><li>Bonus pour développer certains <strong>Projets NERON</strong>.</li></ul>"
+}
+,
+"diplomacy": {
+	"title"
+	: "Diplomatie"
+	,
+	"desc"
+	: "Un bon diplomate sait comment entrer en contact avec les races extra-terrestres.<ul><li>Élimine les chances de résultats négatifs lors des rencontres extra-terrestres.</li><li>Peut déclarer un cesser-le-feu une fois par partie.</li></ul>"
+}
+,
+"gunman": {
+	"title"
+	: "Tireur"
+	,
+	"desc"
+	: "Le tireur manipule les armes de tout type avec beaucoup d\'aisance.<ul><li>+2 <strong>Tirs gratuits</strong> <img src=\'/img/icons/ui/pa_shoot.png\' alt=\'shoot\'/> par jour.</li><li>Vos tirs ratés provoquent 2 fois moins de maladresses.</li><li>Vos tirs réussis provoquent 2 fois plus de coups critiques.</li><li>Bonus pour développer certains Projets NERON.</li></ul>"
+}
+,
+"sprint": {
+	"title"
+	: "Sprinter"
+	,
+	"desc"
+	: "Le Sprinter débute toujours sa journée du bon pied ! Il profite de Points de Mouvement supplémentaires.<ul><li>Vous gagnez 2 <img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> de plus à chaque conversion <img class=\'paslot\' src=\'/img/icons/ui/pa_slot1.png\' alt=\'pa\' />-<img class=\'paslot\' src=\'/img/icons/ui/pa_slot2.png\' alt=\'pm\'/> ( non cumulatif avec la <strong>Trottinette</strong>).</li><li>+ 1 étape en exploration.</li></ul>"
+}
+,
+"survival": {
+	"title"
+	: "Survie"
+	,
+	"desc"
+	: "L\'expert en survie est un bon atout dans les missions d\'exploration. Il peut se défendre plus efficacement contre les formes de vies extraterrestres et s\'en sortira mieux que les autres.<ul><li>Expédition : Chaque dégât est <strong>réduit de un point</strong>. </li><li>Expédition : L\'év&egrave;nement <strong>Provision</strong> donne un steak de plus.</li><li>Expédition : Dernier à mourir en cas d\'év&egrave;nement fatal.</li></ul>"
+}
+,
+"skilful": {
+	"title"
+	: "Polyvalent"
+	,
+	"desc"
+	: "Vous avez des connaissances...ça peut toujours servir.<ul><li>Vous êtes considéré comme <strong>Botaniste</strong>, <strong>Diplomate</strong> et <strong>Biologiste</strong> mais ne disposez pas de leur actions et ressources.</li></ul>"
+}
+,
+"pilot": {
+	"title"
+	: "Pilote"
+	,
+	"desc"
+	: "Le pilote est un expert en manœuvre dans les vaisseaux Icarus, Pasiphae et Patrouilleur. Sa maîtrise aérienne est impressionnante.<ul><li>Utilise des <strong>Tactiques De Pilotage</strong>.</li><li><strong>Ne rate jamais</strong> les atterrissages et décollages.</li><li>Bonus pour développer certains Projets NERON.</li></ul>"
+}
+,
+"bag"
+: "Bag:"
+,
+"equipment"
+: "Équipement"
+,
+"postit": {
+	"title"
+	: "Pense-Bête"
+	,
+	"desc"
+	: ""
+}
+,
+"space_suit": {
+	"title"
+	: "Combinaison"
+	,
+	"desc"
+	: ""
+}
+,
+"trad_module": {
+	"title"
+	: "Module Babel"
+	,
+	"desc"
+	: ""
+}
+,
+"driller": {
+	"title"
+	: "Foreuse"
+	,
+	"desc"
+	: ""
+}
+,
+"echo_sounder": {
+	"title"
+	: "EchoLocateur"
+	,
+	"desc"
+	: ""
+}
+,
+"quad_compass": {
+	"title"
+	: "Boussole quadrimetric"
+	,
+	"desc"
+	: ""
+}
+,
+"rope": {
+	"title"
+	: "Corde"
+	,
+	"desc"
+	: ""
+}
+,
+"heat_seeker": {
+	"title"
+	: "ThermoSenseur"
+	,
+	"desc"
+	: ""
+}
+,
+"white_flag": {
+	"title"
+	: "Drapeau blanc"
+	,
+	"desc"
+	: ""
+}
+,
+"weaponry"
+: "Armements"
+,
+"blaster": {
+	"title"
+	: "Blaster"
+	,
+	"desc"
+	: ""
+}
+,
+"knife": {
+	"title"
+	: "Couteau"
+	,
+	"desc"
+	: ""
+}
+,
+"natamy_riffle": {
+	"title"
+	: "Natamy"
+	,
+	"desc"
+	: ""
+}
+,
+"items_decoup_05": {
+	"title"
+	: "Lizaro Jungle"
+	,
+	"desc"
+	: ""
+}
+,
+"machine_gun": {
+	"title"
+	: "Sulfateuse"
+	,
+	"desc"
+	: ""
+}
+,
+"missile_launcher": {
+	"title"
+	: "Lance-Roquette"
+	,
+	"desc"
+	: ""
+}
+,
+"grenade": {
+	"title"
+	: "Grenade"
+	,
+	"desc"
+	: ""
+}
+,
+"txt": {
+	"title"
+	: "**Exploration info for {{p_name}}.**"
+	,
+	"info"
+	: "\n//It is located {{p_fuel}} sectors at {{p_dir}} and has {{zones}} zones.//"
+	,
+	"group"
+	: "\n \n**Proposed team and equipment: **"
+	,
+	"gains"
+	: "\n \n**Possible gains: **"
+	,
+	"o2"
+	: "\nUp to {{maxoxygen}} :o2: units."
+	,
+	"fuel"
+	: "\nUp to {{maxfuel}} :fuel: units."
+	,
+	"artefact"
+	: "\nUp to one alien artefact."
+	,
+	"artefact_plural"
+	: "\nUp to {{count}} alien artefacts."
+	,
+	"map"
+	: "\nUp to one map fragment."
+	,
+	"map_plural"
+	: "\nUp to {{count}} map fragments."
+	,
+	"steak"
+	: "\nUp to one alien steak."
+	,
+	"steak_plural"
+	: "\nUp to {{count}} alien steaks."
+	,
+	"fruit"
+	: "\nUp to one alien fruit."
+	,
+	"fruit_plural"
+	: "\nUp to {{count}} alien fruits."
+	,
+	"team"
+	: "\nTeam has 1 strength point."
+	,
+	"team_plural"
+	: "\nTeam has {{count}} strength points."
+	,
+	"risks"
+	: "\n**Possible risks: **"
+	,
+	"groupdeath"
+	: "\nAll team members die in up to one zone."
+	,
+	"groupdeath_plural"
+	: "\nAll team members die in up to {{count}} zones."
+	,
+	"death"
+	: "\nA team member dies in up to one zone."
+	,
+	"death_plural"
+	: "\nA team member dies in up to {{count}} zones."
+	,
+	"health"
+	: "\nUp to {{health}} points of personal :pv: could be lost."
+	,
+	"accident"
+	: "\nUp to {{accident1}} - {{accident2}} :pv: could be lost by accident."
+	,
+	"fatigue"
+	: "\nUp to {{fatigue}} :pv: could be lost by fatigue."
+	,
+	"fight"
+	: "\nUp to one enemy with up to {{damage}} strength points."
+	,
+	"fight_plural"
+	: "\nUp to {{count}} enemies with up to {{damage}} strength points."
+	,
+	"mushtrap"
+	: "\nInfection with up to one spore."
+	,
+	"mushtrap_plural"
+	: "\nInfection with up to {{count}} spores."
+	,
+	"lost"
+	: "\nUp to one member could get lost."
+	,
+	"lost_plural"
+	: "\nUp to {{count}} members could get lost."
+	,
+	"illness"
+	: "\nUp to a team member would fall ill."
+	,
+	"illness_plural"
+	: "\nUp to {{count}} team members would fall ill."
+	,
+	"objlost"
+	: "\nUp to one item could be lost."
+	,
+	"objlost_plural"
+	: "\nUp to {{count}} items could be lost."
+	,
+	"finnish"
+	: "\nUp to one chance to forfeit the expedition."
+	,
+	"finnish_plural"
+	: "\nUp to {{count}} chances to forfeit the expedition."
+	,
+	"wander"
+	: "\nUp to one chance to wander."
+	,
+	"wander_plural"
+	: "\nUp to {{count}} chances to wander."
+}
+}}}}

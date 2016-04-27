@@ -436,10 +436,10 @@
 ,
 "txt": {
 	"title"
-	: "**Expedition information for {{p_name}}.**"
+	: "**Exploration info for {{p_name}}.**"
 	,
 	"info"
-	: "\n//It is located {{p_fuel}} sectors to the {{p_dir}} and has {{zones}} zones.//"
+	: "\n//It is located {{p_fuel}} sectors at {{p_dir}} and has {{zones}} zones.//"
 	,
 	"group"
 	: "\n \n**Proposed team and equipment: **"
@@ -454,10 +454,10 @@
 	: "\nUp to {{maxfuel}} :fuel: units."
 	,
 	"artefact"
-	: "\nUp to one artefact."
+	: "\nUp to one alien artefact."
 	,
 	"artefact_plural"
-	: "\nUp to {{count}} artefacts."
+	: "\nUp to {{count}} alien artefacts."
 	,
 	"map"
 	: "\nUp to one map fragment."
@@ -466,34 +466,37 @@
 	: "\nUp to {{count}} map fragments."
 	,
 	"steak"
-	: "\nUp to one steak."
+	: "\nUp to one alien steak."
 	,
 	"steak_plural"
-	: "\nUp to {{count}} steaks."
+	: "\nUp to {{count}} alien steaks."
 	,
 	"fruit"
-	: "\nUp to one fruit."
+	: "\nUp to one alien fruit."
 	,
 	"fruit_plural"
-	: "\nUp to {{count}} fruits."
+	: "\nUp to {{count}} alien fruits."
 	,
 	"team"
-	: "\nTeam's strength {{strength}}."
+	: "\nTeam has 1 strength point."
+	,
+	"team_plural"
+	: "\nTeam has {{count}} strength points."
 	,
 	"risks"
 	: "\n**Possible risks: **"
 	,
 	"groupdeath"
-	: "\nUp to one chance for a Team Death."
+	: "\nAll team members die in up to one zone."
 	,
 	"groupdeath_plural"
-	: "\nUp to {{count}} chances for a Team Death."
+	: "\nAll team members die in up to {{count}} zones."
 	,
 	"death"
-	: "\nUp to one member could die."
+	: "\nA team member dies in up to one zone."
 	,
 	"death_plural"
-	: "\nUp to {{count}} members could die."
+	: "\nA team member dies in up to {{count}} zones."
 	,
 	"health"
 	: "\nUp to {{health}} points of personal :pv: could be lost."
@@ -505,16 +508,16 @@
 	: "\nUp to {{fatigue}} :pv: could be lost by fatigue."
 	,
 	"fight"
-	: "\nUp to one fight against {{damage}} of enemy strength."
+	: "\nUp to one enemy with up to {{damage}} strength points."
 	,
 	"fight_plural"
-	: "\nUp to {{count}} fights against {{damage}} of enemy strength."
+	: "\nUp to {{count}} enemies with up to {{damage}} strength points."
 	,
 	"mushtrap"
-	: "\nUp to one Mush Trap."
+	: "\nInfection with up to one spore."
 	,
 	"mushtrap_plural"
-	: "\nUp to {{count}} Mush Traps."
+	: "\nInfection with up to {{count}} spores."
 	,
 	"lost"
 	: "\nUp to one member could get lost."
@@ -523,10 +526,10 @@
 	: "\nUp to {{count}} members could get lost."
 	,
 	"illness"
-	: "\nUp to one illness could be contracted."
+	: "\nUp to a team member would fall ill."
 	,
 	"illness_plural"
-	: "\nUp to Un {{count}} illnesses could be contracted."
+	: "\nUp to {{count}} team members would fall ill."
 	,
 	"objlost"
 	: "\nUp to one item could be lost."

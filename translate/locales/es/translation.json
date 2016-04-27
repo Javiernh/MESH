@@ -478,7 +478,10 @@
 	: "\nHasta {{count}} frutos alien."
 	,
 	"team"
-	: "\n \nEl equipo cuenta con {{strength}} puntos de fuerza."
+	: "\n \nEl equipo cuenta con 1 punto de fuerza."
+	,
+	"team_plural"
+	: "\n \nEl equipo cuenta con {{count}} puntos de fuerza."
 	,
 	"risks"
 	: "\n \n**Posibles riesgos: **"

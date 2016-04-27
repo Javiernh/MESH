@@ -9,9 +9,9 @@
 // @require	http://data.mush.twinoid.es/js/4/jquery-ui-1.9.1.custom.min.js
 // @require	https://raw.githubusercontent.com/i18next/i18next/master/i18next.min.js
 // @grant	GM_getResourceText
-// @resource	translation:es https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/es/translation.json
-// @resource	translation:en https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/en/translation.json
-// @resource	translation:fr https://raw.githubusercontent.com/Javiernh/MESH/beta/translate/locales/fr/translation.json
+// @resource	translation:es https://raw.githubusercontent.com/Javiernh/MESH/release/translate/locales/es/translation.json
+// @resource	translation:en https://raw.githubusercontent.com/Javiernh/MESH/release/translate/locales/en/translation.json
+// @resource	translation:fr https://raw.githubusercontent.com/Javiernh/MESH/release/translate/locales/fr/translation.json
 // @version	0.5b
 // ==/UserScript==
 /* jshint -W043 */

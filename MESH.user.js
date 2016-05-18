@@ -11,9 +11,9 @@
 // @require	http://code.jquery.com/jquery-latest.js
 // @require	http://data.mush.twinoid.es/js/4/jquery-ui-1.9.1.custom.min.js
 // @require	https://raw.githubusercontent.com/Javiernh/MESH/master/lib/i18next.js
-// @resource	translation:es https://raw.githubusercontent.com/Javiernh/MESH/release/translate/locales/es/translation.json
-// @resource	translation:en https://raw.githubusercontent.com/Javiernh/MESH/release/translate/locales/en/translation.json
-// @resource	translation:fr https://raw.githubusercontent.com/Javiernh/MESH/release/translate/locales/fr/translation.json
+// @resource	translation:es https://raw.githubusercontent.com/Javiernh/MESH/master/translate/locales/es/translation.json
+// @resource	translation:en https://raw.githubusercontent.com/Javiernh/MESH/master/translate/locales/en/translation.json
+// @resource	translation:fr https://raw.githubusercontent.com/Javiernh/MESH/master/translate/locales/fr/translation.json
 // @version	0.6
 // ==/UserScript==
 /* jshint -W043 */

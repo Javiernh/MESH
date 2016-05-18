@@ -297,6 +297,9 @@
 	: "El piloto es un experto en maniobrar las naves Icarus, Pasiphae y Patrullero. Su dominio del espacio es impresionante.<ul><li>Usa <strong>Tácticas de pilotaje</strong>.</li><li><strong>No falla nunca</strong> los aterrizajes ni los despegues.</li><li>Bonus para desarrollar ciertos <strong>Proyectos NERON</strong>.</li></ul>"
 }
 ,
+"someone"
+: "Cualquiera"
+,
 "bag"
 : "Mochila:"
 ,

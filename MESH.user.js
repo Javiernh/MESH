@@ -2,16 +2,18 @@
 // @name	Mesh
 // @namespace	Mush Expedition System Help
 // @description	Script Mush para asistir en las exploraciones
-// @downloadURL	https://github.com/Javiernh/MESH/raw/release/MESH.user.js
+// @downloadURL	https://github.com/Javiernh/MESH/raw/master/MESH.user.js
 // @include	http://mush.twinoid.*/
+// @include	http://mush.twinoid.*/#
 // @include	http://mush.vg/
+// @include	http://mush.vg/#
+// @grant	GM_getResourceText
 // @require	http://code.jquery.com/jquery-latest.js
 // @require	http://data.mush.twinoid.es/js/4/jquery-ui-1.9.1.custom.min.js
 // @require	https://raw.githubusercontent.com/Javiernh/MESH/master/lib/i18next.js
-// @grant	GM_getResourceText
-// @resource	translation:es https://raw.githubusercontent.com/Javiernh/MESH/release/translate/locales/es/translation.json
-// @resource	translation:en https://raw.githubusercontent.com/Javiernh/MESH/release/translate/locales/en/translation.json
-// @resource	translation:fr https://raw.githubusercontent.com/Javiernh/MESH/release/translate/locales/fr/translation.json
+// @resource	translation:es https://raw.githubusercontent.com/Javiernh/MESH/master/translate/locales/es/translation.json
+// @resource	translation:en https://raw.githubusercontent.com/Javiernh/MESH/master/translate/locales/en/translation.json
+// @resource	translation:fr https://raw.githubusercontent.com/Javiernh/MESH/master/translate/locales/fr/translation.json
 // @version	0.6
 // ==/UserScript==
 /* jshint -W043 */
@@ -260,6 +262,7 @@ MESH.exploHeroes = function(addTo) {
 		$('<span>' + i18next.t('heroe', { num: i+1 }) + ' </span>').addClass('MESHfloat').appendTo(divhero);
 		var select = $('<select name="hero' + i + '">').addClass('MESHfloat').appendTo(divhero);
 		$('<option value="" selected>-----</option>').appendTo(select);
+		$('<option value="' + i18next.t('someone') + '">' + i18next.t('someone') + '</option>').appendTo(select);
 		for (var hero in MESH.heroes) {
 			$('<option value="' + MESH.heroes[hero] + '">' + MESH.heroes[hero].replace("_", " ").capitalize() + '</option>').appendTo(select);
 		}
@@ -273,7 +276,8 @@ MESH.exploHeroes = function(addTo) {
 	$('.MESH-exploheroes select[name^="hero"]').change(function() {
 		var indsel = parseInt($(this).attr('name').replace('hero', ''));
 		var hideHero = $(this).val();
-		if (hideHero !== "") {
+		if (hideHero !== i18next.t('someone')) {
+//		if (hideHero !== "") {
 			$('.MESH-exploheroes option[value=' + hideHero + ']').hide();
 		}
 		$('.MESH-exploheroes option[value=' + prevHero[indsel] + ']').show();

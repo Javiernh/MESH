@@ -297,6 +297,9 @@
 	: "Le pilote est un expert en manœuvre dans les vaisseaux Icarus, Pasiphae et Patrouilleur. Sa maîtrise aérienne est impressionnante.<ul><li>Utilise des <strong>Tactiques De Pilotage</strong>.</li><li><strong>Ne rate jamais</strong> les atterrissages et décollages.</li><li>Bonus pour développer certains Projets NERON.</li></ul>"
 }
 ,
+"someone"
+: "Quelqu'un"
+,
 "bag"
 : "Bag:"
 ,

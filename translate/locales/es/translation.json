@@ -91,7 +91,7 @@
 	: "Vida inteligente"
 	,
 	"desc"
-	: ""
+	: "Forma avanzada de seres tal vez más inteligentes que tú."
 }
 ,
 "mankarog": {
@@ -107,7 +107,7 @@
 	: "Predador"
 	,
 	"desc"
-	: ""
+	: "Formas de vida animal carnívora."
 }
 ,
 "ruminant": {
@@ -123,7 +123,7 @@
 	: "Temperatura alta"
 	,
 	"desc"
-	: ""
+	: "Calor intenso que puede dificultar la expedición."
 }
 ,
 "cold": {
@@ -136,10 +136,10 @@
 ,
 "sismic_activity": {
 	"title"
-	: "Actividad sísmica"
+	: "Sísmico"
 	,
 	"desc"
-	: ""
+	: "Fuerte actividad sísmica."
 }
 ,
 "strong_wind": {
@@ -179,7 +179,7 @@
 	: "Desierto"
 	,
 	"desc"
-	: ""
+	: "Este planeta tiene terrenos desérticos y hostiles."
 }
 ,
 "forest": {
@@ -211,7 +211,7 @@
 	: "Huerta"
 	,
 	"desc"
-	: ""
+	: "Presencia de árboles frutales."
 }
 ,
 "ruins": {

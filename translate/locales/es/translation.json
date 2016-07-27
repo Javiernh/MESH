@@ -67,7 +67,7 @@
 	: "Oxígeno"
 	,
 	"desc"
-	: ""
+	: "Presencia de oxígeno en la atmósfera."
 }
 ,
 "hydrocarbon": {
@@ -163,7 +163,7 @@
 	: "Gruta"
 	,
 	"desc"
-	: ""
+	: "Este planeta está lleno de cuevas oscuras."
 }
 ,
 "cristal_field": {

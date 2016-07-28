@@ -152,10 +152,10 @@
 ,
 "volcanic_activity": {
 	"title"
-	: "Actividad volcánica"
+	: "Volcán"
 	,
 	"desc"
-	: ""
+	: "Actividad volcánica."
 }
 ,
 "cave": {

@@ -502,7 +502,7 @@
 	: "\nUn miembro muere hasta en {{count}} zonas."
 	,
 	"health"
-	: "\nUn miembro pierde hasta {{health}} puntos de vida."
+	: "\nUn miembro pierde hasta {{health1}} - {{health2}} puntos de vida."
 	,
 	"accident"
 	: "\nHasta {{accident1}} - {{accident2}} :pv: de daño por accidente."
